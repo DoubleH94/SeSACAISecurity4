@@ -1,0 +1,245 @@
+cat /etc/passwd
+:(콜론)으로 구분된 7개 필드
+> User : x : uid : gid : comment : home : shell
+> choi:x:1000:1000:Choi:/home/choi:/bin/bash
+
+shadow : 패스워드
+> User: Hash: Last-change : Min: Max: Warn Inactive Expire:
+> choi:~::0:99999:7::: (~로 요약)
+> 이름:해쉬:최종수정일시:
+Hash
+> 축소하는 암호화과정, 복호화 불가능
+> 패스워드 등에 적용함( 암호 입력 시 비교 하여 체크)
+> 하나의 해시에 2개 이상의 암호가 이론적으로 존재할 수 있음 : 해시 충돌(hash collision)
+
+??Hash 에 Hash-function-ID 가 표시되어 있는데 이걸 가릴 필요는 없는지
+> 일반적으로 필요없음, 로그인 시 서버가 솔트를 쉽게 읽을 수 있어야하고, 솔트를 알아내도 비밀번호를 알기 어렵게 설계되어있음.
+> 다만 다음과 같은 이유로 암호화된 솔트를 쓸 수도 있음
+> 1. 추가적인 보안 레이어 설정(솔트의 노출을 줄이기위해)
+> 2. 커스텀 설계로 공격자에게 해시 구조를 숨기고 싶을때
+> 3. 연구목적으로 솔트 구조까지 난독화 하는 경우 등
+> ??? 현업에서 솔트를 암호화 하는 경우가 있는지 
+> 없을듯, 솔트값이 암호화되면 그 정보를 보호하기위한 Overhead가 생기며, 솔트값이 노출되어도 암호를 알기 어렵다.
+
+man openss
+openssl passwd -6 -salt ~(솔트값)
+> 같은 해시값이 나오는지 확인해보기
+
+
+사용자 관리
+> 직원이 자주 바뀌진 않고, 관리자가 아니면 쓸 일이 거의 없음
+> 하지만 기초이니 알고는 있어야함.
+
+adduser 혹은 useradd 
+> 중 한 개만 쓰면 됨
+
+sudo adduser user1
+sudo passwd user1
+su user1
+> su : switch user
+> ex) su - : root로 로그인
+ls -l /home 혹은 ls -al /home
+> 사용자 디렉토리 추가된 것 확인
+sudo more /etc/passwd
+> 새 사용자 passwd 파일에 추가된 것 확인
+
+cat /etc/default/useradd
+
+cat /etc/login.defs
+> PAM에 사용함 > 확인할 것
+
+sudo nano /etc/login.defs
+> PASS_MAX_DAYS 를 88888로 수정
+sudo adduser user2
+sudo passwd user2
+sudo more /etc/shadow | grep user2
+> 암호최대사용일 변경된 것 확인
+
+사용자 삭제 시 그냥 삭제하면 홈 디렉토리가 남아있음
+> -r 옵션을 사용해서 홈 디렉토리까지 삭제
+sudo userdel user2
+ls -al /home
+> user2 디렉토리 남아있는 것 화긴
+
+그룹을 만들 일은 잘 없다 > 한 번 해봐라
+
+sudo more /var/log/messages
+sudo tail -f /var/log/messages
+> 실시간 모니터링(follow 모드)
+> Ctrl + C 로 탈출
+
+sudo tail -F /var/log/messages
+> message 로그와 dmesg에서 Fail 등 빨간 글씨를 확인함
+> 모르겠으면 출력하고 다 긁어서 구글에 검색 : 분석해줌
+w
+> utmp : 현재 시스템에 로그인한 각 사용자의 상태를 저장
+whoami
+> 현재 계정
+last 
+> wtmp : 로그인,로그아웃,시스템의 재부팅 정보 제공
+lastlog
+> lastlog : 계정 별 마지막으로 로그인 성공한 일시 정보 제공
+lastb
+> btmp : 실패한 로그인 정보 제공
+
+
+chmod : change mod
+chwon : change owner
+> 보통 744, 754? 
+
+umask
+> 파일이나 디렉토리 처음 생성시 default 권한 지정해주는 
+> default : 0022 > 755로 세팅됨
+
+특수 권한 관리
+비밀번호 변경시 /etc/passwd 혹은 /etc/shadow 파일에 접근해야 하는데 해당 파일은 root 파일임 > 수정 불가능
+
+su -
+echo "test" > /tmp/ro-file
+chmod 440 /tmp/ro-file
+exit
+cat ro-file
+> 허가 거부됨
+sudo chmod u+s /usr/bin/cat
+cat ro-file
+> 파일 출력됨 > 허용됨
+sudo u-s /usr/bin/cat
+> cat의 setUID를 원래대로 돌려놓음
+
+find /bin /usr/bin /sbin -perm -4000 -o -рerm -2000 |xargs Is -I
+> 기본으로 setUID : 16개, setGID : 2개 있는듯
+> /bin, /usr/bin, /sbin 디렉토리는 시스템에서 실행되는 핵심 명령어들이 위치한 경로 > 잠재적으로 위험한 실행 파일들을 찾기 위한 보안점검 목적
+> /bin : 부팅 시 필요한 필수 명령어
+> /usr/bin : 사용자 명령어 대부분 위치
+> /sbin : 시스템 관리용 명령어
+
+ll / | grep tmp
+> tmp
+
+파일에 대한 삭제 권한은 디렉토리에 있음.
+디렉토리에 쓰기+실행 권한이 있으면 그 디렉토리 안의 파일을 삭제할 수 있음.
+디렉토리 권한 
+> r : 디렉토리 안의 파일 목록을 읽을 수 있음
+> w : 디렉토리 내에서 파일 추가/삭제 가능
+> x : 디렉토리에 진입,접근 할수 있음
+> -w- : 사실상 아무것도 못 함
+> -wx : 파일 생성, 삭제 가능
+> r-x : 목록 보기 가능
+> rw- : 접근 불가 , 무의미한 조합
+
+???SetGID : 파일 생성 시 SetGID설정되어 있으면 디렉토리 소유자의 그룹으로 생성된다.
+
+Sticky bit
+> 디렉토리 권한을 777로 해놓으면 그 안에 설정한 파일 및 디렉토리는 누구나 와서(사용자가) 생성, 삭제가 가능하다
+> 디렉토리 권한을 1777로 설정하면 그 안에 생성은 누구나 할 수 있지만 삭제는 소유자와 root 만 가능(이 경우 root 소유이기 때문에 root만 가능)
+
+mkdir -p test1
+> -p : 원래는 같은 이름의 디렉토리가 있으면 에러가 발생되는데, 에러를 무시하고 없을 때만 만들어라
+
+OSI 7 Layer
+APSTND+P : 아파서티내다
+Application
+Presentation
+Session
+Transport
+Network
+DataLink
+Pysical
+
+현재 망에선 TCP/IP 프로토콜 사용함
+Application
+Transport		Port	L4
+Internet		IP	L3
+Network Interface	MAC	L2
+
+IPv4 를 쓰다가 양이 적어서 IPv6가 나왓음
+
+Subnet 없는 주소 기법
+: 연결된 모든 PC에 누가 B냐 하고 Broadcasting 됨(ARP)
+
+Subnet에 의한 주소 기법
+: 더 작은 Network로 쪼개져 있음 Broadcasting domain 축소 
+
+route -n 
+> Destination IP에 따라 Iface(Interface)로 나감
+> 0.0.0.0 > 모르겠는건 enp0s3로 나가라
+> 10.0.2.0 		> enp0s3
+> 192.168.56.0 	> enp0s8
+
+arp -a
+> ARP table 확인
+> 한 번 Broadcasting 한 것은 또 할 필요 없잖아 > ARP 데이터 저장
+> ARP는 L2 망 안에만 보냄(라우터 안넘어감)
+ex) 01이 03에게 접근하려면 IP로 내부망이라는 것을 알고 있으니 ARP로 MAC 주소 획득
+ex) 01이 다른 회사에 접근하려면 라우터 주소로 접근, 인터넷을 통해 찾아감
+ARP Spoofing 
+> 공격자가 위조된 ARP 응답 패킷을 보내서 피해자의 ARP table에 잘못된 MAC 주소를 등록하게 만드는 공격
+
+TCP(Http, FTP, SSH)
+> 신뢰성
+UDP
+> 영상, 음성 : 한 프레임이 날라가도 다 복원이 됨, 실시간성
+ex) 음성을 TCP로 보내면 중간에 날라갈 때마다 지연이 생김
+3-way Handshake(연결 할 때)
+SYN-SYN+ACK-ACK
+4-way Handshake(연결 끊을 때)개ㅕ
+FIN-ACK-FIN-ACK
+ex) WireShark 네트워크 분석기
+TCP stat Diagram : 흐름만 이해하고 나중에 참고하면 됨
+
+ifconfig
+MAC addr : 
+> 앞에 3칸은 OUI임,어떤 회사 제품인지 알 수 있음
+netmask 255.255.255.0 : 앞에 3자리는 고정이고 뒤에 1자리는 알아서해라
+
+ip addr
+ip route
+ip link
+> 좀 더 자세히 보여주는 명령어
+
+netstat -ntp
+tcp와 붙어있는 네트워크 확인
+
+/etc/resolv.conf
+> DNS 설정하는 파일
+
+ping www.google.com
+
+mii-tool -v enp0s3
+>인터페이스 상태를 점검하고 설정하는 유틸리티
+
+ssh choi@192.168.56.102
+> 보안 접속
+
+scp
+> ?보안 접속, 파일 복사
+
+방화벽
+Firewalld
+	systemctl ~ firewalld : enable, start,stop,restart
+	firewall-cmd --list-all-zones
+	firewall-cmd --list-all
+iptables
+Netfilter : 커널 내부에서 차단해주는 역할
+
+firewall-cmd --list-zone=public
+> services : 어떤 녀석들이 열려있는지
+> 방화벽의 기본은 다 차단
+
+newzone 만들기
+firewall-cmd --permanent --remove-service=ssh
+firewall-cmd --permanent --new-zone=newzone
+firewall-cmd --permanent --zone=newzone --add-source=192.168.56.0/24
+firewall-cmd --permanent --zone=newzone --add-service=ssh
+firewall-cmd --reload
+> 새로운 zone(named 'newzone') 추가됨
+> ssh를 통해 접속됨을 확인
+
+newzone 삭제하기
+firewall-cmd --permanent --zone=public --add-services=ssh
+firewall-cmd --get-zones
+> newzone 있음
+firewall-cmd --permanent --delete-zone=newzone
+firewall-cmd --reload
+firewall-cmd --get-zones
+> newzone 없음

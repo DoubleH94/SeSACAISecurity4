@@ -1,0 +1,107 @@
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 13:47:37 2025 from 192.168.56.1
+[choi@vbox ~]$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        0.0.0.0         UG    0      0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     0      0        0 enp0s3
+192.168.56.0    0.0.0.0         255.255.255.0   U     101    0        0 enp0s8
+[choi@vbox ~]$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.56.1             ether   0a:00:27:00:00:08   C                     enp0s8
+_gateway                 ether   52:55:0a:00:02:02   C                     enp0s3
+10.0.2.3                 ether   52:55:0a:00:02:03   C                     enp0s3
+192.168.56.100           ether   08:00:27:ab:be:75   C                     enp0s8
+[choi@vbox ~]$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        ether 08:00:27:19:bb:ec  txqueuelen 1000  (Ethernet)
+        RX packets 911109  bytes 1328389997 (1.2 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 363278  bytes 22040926 (21.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.56.104  netmask 255.255.255.0  broadcast 192.168.56.255
+        inet6 fe80::f7c5:59c1:4439:d2c7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:3d:65:19  txqueuelen 1000  (Ethernet)
+        RX packets 306401  bytes 186104613 (177.4 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 188900  bytes 22580383 (21.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 73  bytes 7936 (7.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 73  bytes 7936 (7.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[choi@vbox ~]$ cd /tmp
+[choi@vbox tmp]$ sudo tcpdump -i enp0s3 -w /tmp/test_DNS.pcap
+[sudo] choi의 암호:
+dropped privs to tcpdump
+tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C6 packets captured
+6 packets received by filter
+0 packets dropped by kernel
+[choi@vbox tmp]$ sudo dnf install dhclient
+마지막 메타자료 만료확인(0:44:44 이전): 2025년 07월 01일 (화) 오후 01시 11분 26초.
+꾸러미 dhcp-client-12:4.4.2-19.b1.el9.x86_64가 이미 설치되어 있습니다.
+종속성이 해결되었습니다.
+처리가 필요하지 않습니다.
+완료되었습니다!
+[choi@vbox tmp]$ nmcli connetcion down id enp0s3
+오류: 'connetcion' 인수는 이해되지 않습니다. 대신 --help를 써 보십시오.
+[choi@vbox tmp]$ nmcli connection down id enp0s3
+'enp0s3' 연결 비활성화에 실패했습니다: Not authorized to deactivate connections
+[choi@vbox tmp]$ sudo nmcli connection down id enp0s3
+'enp0s3' 연결이 성공적으로 비활성화되었습니다 (D-Bus 활성 경로: /org/freedesktop/NetworkManager/ActiveConnection/5)
+[choi@vbox tmp]$ nmcli device
+DEVICE  TYPE      STATE          CONNECTION
+enp0s8  ethernet  연결됨         유선 연결 1
+lo      loopback  연결됨 (외부)  lo
+enp0s3  ethernet  연결 끊겼음    --
+[choi@vbox tmp]$ dhclient enp0s3 -r
+Can't create /var/run/dhclient.pid: Permission denied
+[choi@vbox tmp]$ sudo dhclient enp0s3 -r
+Killed old client process
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+[choi@vbox tmp]$ sudo dhclient enp0s3
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+[choi@vbox tmp]$ nmcli connection up id enp0s3
+오류: 연결 활성화가 실패했습니다: Not authorized to control networking.
+[choi@vbox tmp]$ sudo nmcli connection up id enp0s3
+연결이 성공적으로 활성화되었습니다 (D-버스 활성 경로: /org/freedesktop/NetworkManager/ActiveConnection/7)
+[choi@vbox tmp]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file

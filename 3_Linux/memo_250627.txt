@@ -1,0 +1,300 @@
+# Intro
+
+vitual box 버전은 상관없는지 : ppt 는 7.0.x, 최신 버전은 7.1.10 > 상관x
+https://chat.openai.com
+https://youglish.com
+https://www.yarn.co/
+
+
+이재영/안랩/개발리더/ics
+기술사?정보처리겠지 통신일수도
+
+리눅스 : OS 중에 가장 저렴함 > 회사에서 많이 사용
+이번에는 3일이라 내용이 많이 쳐내져있음
+
+프로세스/스레드 스케쥴링 > 실제로는 잘 안씀 > 시험볼때나 필요하지
+5p !!!서비스 추가절차 > 강의 듣다보면 와닿는다 > 중요
+/etc/ 구성이 프로그램마다 다름?
+가상머신에 rocky로 설치한 서버에 host 윈도우에서 MobaXterm을 클라이언트로 해서 접근
+
+VMWare 써도 상관은 없음	
+
+호스트 키 조합 ( = Host Key Combo 입력 )을 <호스트+Ins> 에서 Right Control 로 변경함 > ?잘 몰루
+
+Get-FileHash -Algorithm SHA256 "C:\Users\SBA_USER\Desktop\Choi\w3_System\Rocky-9.6-x86_64-dvd.iso"
+
+checksum error 발생시 저장소에서 해당 iso 설정해주고 다시 켜보기
+
+전체 시스템에 상관없이 커널은 전부 동일함. OS에 따라 pakage(명령어 등) 이 조금씩 다름
+
+가상머신 원본 세팅 및 저장 해두고 이를 복제(완전한 복제)해서 사용할 것 > 문제 발생시 복제된 머신만 삭제후 다시 복제해서 사용
+
+VM웨어는 랜카드 한 개 더 안꽂아도 원격 및 이더넷 사용 가능(VB는 랜카드가 각각 있어야함)
+
+man mkdir
+: man = manual
+
+mkdir -p mydir 
+-p : 없으면 만들어라
+
+su - 입력 후 비밀번호 입력
+: root 권한 획득
+
+#텍스트 편집기 
+nano :	 
+	직관적인 키 조합 > 초보자, 혹은 설정파일 빠르게 편집
+	Ctrl + X,y
+vi/vim : 
+	단축키를 많이 외워야 되는데 기능이 많음, 모드기반(명령/입력), 매우빠름,강력한기능 > 중급 이상 사용자, 서버작업
+
+gedit : GUI 편집기
+kate : GUI 편집기
+emacs : 확장성 최고,IDE 수준, 커스터마이징 자유 > 파워유저, 프로그래머
+
+~/.vimrc : vi 환경변수 파일(ex 탭 입력 시 이동 거리 등)
+
+완전히 루트권한으로 작업(su -) 하는게 아니라 sudoers 리스트에 사용자 계정을 추가해서 sudo 명령어로 일시적으로 root 권한을 얻을 수 있도록 변경하기
+
+echo : 다른 설정이 없으면 콘솔에 단순히 출력, 뒤에 파일명을 지정하면 저장되게 할 수 있음
+
+PS1 을 바꾸면 프롬프트에 출력되는 형식을 수정할 수 있음 
+ex)
+현재 : [\u@h \W]\$	> [choi@vbox mydir]$
+
+PS1 : 기본 프롬프트
+PS2 : 보조 프롬프트
+
+history : 내가 사용했던 명령어 기록
+> 기존에 쓴 명령어가 길 때는 불러와서 쓰기도 함
+> 환경변수를 통해 메모리 사이즈에 대한 설정 가능
+
+Alias : 명령의 별칭을 지정하는 명령
+> alias 명령어를 통해 저장되어 있는 별칭 확인
+> 현업에서 많이 씀 ( 긴 명령어를 별칭으로 저장해두고 사용)
+
+cd ~ : 현재 계정의 홈으로 감
+환경변수에 저장해놓지 않으면 alias도 history도 전부 사라짐
+저장해두고 사용해야함
+
+which : 명령의 절대 경로 확인
+locate : 해당키워드가 포함된 모든 명령 검색
+> locate 명령어는 mlocate 또는 plocate 에 포함되어 있음
+> sudo dnf install mlocate (또는 ploacte) 으로 설치할 것
+find : 파일 검색 명령
+
+cat : 표준입출력으로 문자열 조작
+
+head -n: 시작부터 n줄
+> ex) ls -al | head -5
+tail : 끝에 부터 몇 줄
+> 로그에서 tail 명령어를 많이 씀
+> 로그 파일은 root권한으로 확인하기
+
+grep : 파일 안에서 내용을 찾기
+
+Backup/Restore 명령(96p)
+split -I 100 /etc/services service	
+> /etc/services 파일을 열 파일로 분할
+tar cvf services.tar service-*
+> "service-" prefix를 갖은 파일을 tar로 묶음
+> 3번째 파라미터에 일치하는 파일이 없으면, 에러 발생 가능 "No such file of directory"
+> .tar은 압축이 아님, 압축까지 하려면 z 옵션 추가(.tar.gz)
+> tar czvf services.tar.gz service-*
+> 2번째 파라미터의 순서는 상관없음
+> 예시
+	rw-r--r--. 1 choi choi 788480  6월 27 14:10 services.tar
+	rw-r--r--. 1 choi choi 146873  6월 27 14:16 services.tar.gz
+> tar z 명령어 사용해서 압축했고 파일 크기 차이 확인
+>  tar x 명령어로 압축 해제 가능
+
+#날짜&시간관리
+
+date
+date -s "2024-07-21 10:00:00"
+> 입력된 시간 적용
+date -u
+> UTC 시간 적용
+timedatectl
+> Timezone 확인
+timedatectl list-timezones
+> 수정할 수 있는 Timezones 리스트
+ls -al /etc/localtime
+> lrwxrwxrwx. 1 root root 32  6월 27 11:20 /etc/localtime -> ../usr/share/zoneinfo/Asia/Seoul
+> Seoul 시간을 참조 하고 있음을 알 수 있음
+
+#프로세스 관리
+ps -aux
+> ps : process status
+> 자주 씀 알고 있어야함
+top
+> 동작중인 process의 실시간 상태 확인
+> 알고 있어야함
+> 'q' 를 누르면 나올 수 있음
+
+jobs,fg,bg
+> 백그라운드,포그라운드 작업 확인
+
+#시스템 리소스 관리
+기억할만한 명령어 top,htop,ps/kill/sleep,bg,fg,jobs/free
+free -h
+> free : 시스템의 메모리 사용량에 대한 정보 표시
+> -h : 단위 조절해서 좀 더 편하게 보기
+uname -a
+> 5.14.~ 커널버전
+> 나머지는 나눠서 보는 명령어
+
+인텔 페이지에서 프로세서의 정보 확인
+total cores : cpu 칩이 박힌 갯수
+> 가상화 해서 여러 개로 쓸 수 있음 : 쓰레드
+total Threads : 쓰레드 수
+
+리눅스의 힘든 점 : 명령어가 구현되어 있지 않으면 잔뜩 긴 파일을 뒤져서 봐야함
+cat /proc/cpuinfo | more
+> model name      : 12th Gen Intel(R) Core(TM) i7-12700
+> siblings	: 4 > 쓰레드
+> core i	: 0
+> cpu cores	: 4
+>하이퍼 쓰레딩??
+
+cat /proc/meminfo
+> MemTotal:        3742952 kB
+> MemFree:         1766448 kB
+
+ps -aux
+> 갑자기 느리네 왜느리지 할때 %CPU 확인
+> top 명령어를 보면 실시간으로 확인 가능
+
+htop
+> 을 쓰기위해 yum install -y epel-release , yum install htop
+
+테스트프로그램
+> htop이 바뀌는걸 보기위해서 계속 리소스 사용
+vi testapp.c
+make testapp
+
+파일시스템
+df -h
+> 왼쪽에 있는 물리적 장비가 Mounted on 에 연결되어 있음
+> 비정상적으로 많이 쓰고 있는 것들(Use%) 찾아내기
+
+ls -al /
+> 루트 디렉터리 확인
+> [tree -L 1 /] : 트리 형태로 root directory 확인
+
+/etc : 설정파일( cd /etc )
+/home : 사용자 디렉토리
+/var : 로그파일
+
+mount
+> 디스크와 각각 연결된 디렉토리를 보여줌
+
+mount -l | grep sda
+> sda가 포함된 디스크는 /boot에 연결되어 있음
+
+Device Driver 에서 장착된 디스크의 naming, mount 작업을 함 (Network Device Drive도 동일한 작업)
+
+
+#패키지 관리 
+
+RPM(Red Hat Package Manager)의 의존성 문제를 해결하기 위해 YUM을 사용
+>
+
+yum repolist
+ls -al /etc/yum.repos.d/
+	-rw-r--r--.   1 root root 6610  5월 17 12:07 rocky-addons.repo
+	-rw-r--r--.   1 root root 1165  5월 17 12:07 rocky-devel.repo
+	-rw-r--r--.   1 root root 2387  5월 17 12:07 rocky-extras.repo
+	-rw-r--r--.   1 root root 3417  5월 17 12:07 rocky.repo
+> repository
+
+cd /etc
+ls
+> /etc에 yum 관련 디렉토리 3개 보임(~,~.conf,~.repos.d)
+
+mirrorlist
+> Repository의 미러 서버 목록을 자동으로 관리해주는 URL 시스템
+> "가까운 저장소 자동 선택을 위한 주소 제공 시스템"
+> Rocky Linux,CentOS, Fedora,Ubuntu 같은 배포판에서 패키지를 빠르고 안정적으로 설치할 수 있도록 도움
+> Fedora, Ubuntu 같은 경우는 metalink라는 더 고급 시스템도 사용(checksum 포함된 mirrorlist)
+> https://mirrors.rockylinux.org/mirrorlist?arch=x86_64&repo=BaseOS-9.6
+
+yum list
+yum list installed
+yum list updates
+yum install "package-name"
+yum install -y epel-release
+yum repository-packages epel list
+
+yum config-manager --dump-variables
+
+# 시스템 및 서비스 매니저 구조
+주요 유닛 : "service",target,socket,path
+
+runlevel5 : 그래픽
+runlevel3 : 까만화면
+
+Systemd-analyze
+> 분석툴 ,잘 안씀, 궁금하면 봐라
+
+# 시스템 및 서비스 매니저/명령
+systemctl 
+> 시작 중지 : (stop,restart,reload)
+> 자동 시작 : 시작프로그램 느낌(enable,disable,enable --now)
+
+systemctl list-units --type=service --state=running
+> 실행중인 시스템콜 확인
+systemctl status tuned.service
+> 그 중 하나인 ~의 상태 확인
+
+**딴건몰라도 이건기억하기**
+<5p의 서비스 추가절차>
+설치-구성-관리-방화벽
+yum-/etc-systemctl-firewall-cmd
+
+1. 설치
+su-
+yum install nginx
+yum list installed nginx
+
+2. 구성파일 확인 (필요하면 수정)
+cd /etc/
+ls *nginx*
+find . -type f | grep nginx
+
+3. 실제 동작하게 설정
+systemctl status nginx
+> (disabled)
+systemctl start nginx
+> 또는 restart
+systemctl status nginx
+> (active)
+
+192.168.56.102로 접속시도
+> 방화벽에 걸려서 안 들어가짐
+
+4. 방화벽 설정
+firewall-cmd --list-all
+> interface,service만 보면 됨
+firewall-cmd --permanent --zone=public --add-service=http
+> --permanent : 껏다켜도 실행되게
+> --zone : 현재는 public을 default로 생각
+> --add-service : 반대로는 --delete-service일듯
+
+5. 시스템 껏다 켜져도 실행되게
+systemctl enable nginx
+> systemctl enable nginx.service 도 같은 결과
+
+
+
+Q&A
+Q1. Rocky 가 선택된 이유?
+A1. 기존에 사용하던 CentOS의 EOS 뒤 Enterprise 용 Linux 중 Rocky 가 선택되었음.
+Q2. 처음부터 보안을 하셨는지
+A2. 라우터, ips, ips 등 소프트웨어 
+AI 초기단계의 신경망은 depth가 늘어날수록 속도가 너무 느려짐
+현재의 AI는 데이터가 중요하고 결정적인 Feature를 뽑아낼 수 있는 능력이 필요> 전문지식이 필요하다 > 포토폴리오에 자세하게 넣는 걸 추천
+1부터 10까지 단계별로 가지말고 뼈대를 잡고 확장해나가기
+CWE = Common Weakness Enumeration
+> S/W 개발 시 발생하는 보안 결함(취약점)의 유형들을 체계적으로 분류
+
+

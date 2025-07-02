@@ -1,0 +1,2886 @@
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 01:45:53 2025 from 192.168.56.1
+[choi@localhost ~]$ dhclient enp0s3 -r
+Can't create /var/run/dhclient.pid: Permission denied
+[choi@localhost ~]$ sudo dhclient enp0s3 -r
+[sudo] choi의 암호:
+[choi@localhost ~]$ sudo dhclient enp0s3
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+[choi@localhost ~]$ sudo dhclient enp0s3
+dhclient(150067) is already running - exiting.
+
+This version of ISC DHCP is based on the release available
+on ftp.isc.org. Features have been added and other changes
+have been made to the base software release in order to make
+it work better with this distribution.
+
+Please report issues with this software via:
+https://bugs.rockylinux.org/
+
+exiting.
+[choi@localhost ~]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 02:01:33 2025 from 192.168.56.1
+
+[choi@vbox ~]$
+[choi@vbox ~]$
+[choi@vbox ~]$ arp -a
+_gateway (10.0.2.2) at 52:55:0a:00:02:02 [ether] on enp0s3
+? (10.0.2.3) at 52:55:0a:00:02:03 [ether] on enp0s3
+? (192.168.56.1) at 0a:00:27:00:00:08 [ether] on enp0s8
+? (192.168.56.100) at 08:00:27:ab:be:75 [ether] on enp0s8
+[choi@vbox ~]$ arp -d 192.168.56.1
+SIOCDARP(dontpub): 명령을 허용하지 않음
+[choi@vbox ~]$ sudo arp -d 192.168.56.1
+[sudo] choi의 암호:
+[choi@vbox ~]$ arp -a
+? (192.168.56.1) at 0a:00:27:00:00:08 [ether] on enp0s8
+_gateway (10.0.2.2) at 52:55:0a:00:02:02 [ether] on enp0s3
+? (10.0.2.3) at 52:55:0a:00:02:03 [ether] on enp0s3
+? (192.168.56.100) at 08:00:27:ab:be:75 [ether] on enp0s8
+[choi@vbox ~]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 02:28:21 2025 from 192.168.56.1
+[choi@vbox ~]$ cd /tmp
+[choi@vbox tmp]$ man mkdir
+[choi@vbox tmp]$ mkdir -p mydir
+[choi@vbox tmp]$ su -
+암호:
+[root@vbox ~]# su - choi
+[choi@vbox ~]$ ls -al /etc | grep vimrc
+-rw-r--r--.   1 root root      4017  5월 14 03:11 vimrc
+[choi@vbox ~]$ cd /etc
+[choi@vbox etc]$ ls
+DIR_COLORS               default        kernel                    opt                     shells
+DIR_COLORS.lightbgcolor  depmod.d       keys                      os-release              skel
+GREP_COLORS              dhcp           keyutils                  ostree                  smartmontools
+NetworkManager           dnf            krb5.conf                 pam.d                   sos
+PackageKit               dnsmasq.conf   krb5.conf.d               papersize               speech-dispatcher
+UPower                   dnsmasq.d      ld.so.cache               passwd                  ssh
+X11                      dracut.conf    ld.so.conf                passwd-                 ssl
+accountsservice          dracut.conf.d  ld.so.conf.d              pbm2ppa.conf            sssd
+adjtime                  egl            libaudit.conf             pinforc                 statetab.d
+aliases                  enscript.cfg   libblockdev               pkcs11                  subgid
+alsa                     environment    libibverbs.d              pkgconfig               subgid-
+alternatives             ethertypes     libnl                     pki                     subuid
+anacrontab               exports        libpaper.d                plymouth                subuid-
+appstream.conf           favicon.png    libreport                 pm                      sudo-ldap.conf
+asound.conf              filesystems    libssh                    pnm2ppa.conf            sudo.conf
+at.deny                  firefox        libuser.conf              polkit-1                sudoers
+audit                    firewalld      locale.conf               popt.d                  sudoers.d
+authselect               flatpak        localtime                 printcap                sysconfig
+avahi                    fonts          login.defs                profile                 sysctl.conf
+bash_completion.d        foomatic       logrotate.conf            profile.d               sysctl.d
+bashrc                   fprintd.conf   logrotate.d               protocols               system-release
+bindresvport.blacklist   fstab          lsm                       pulse                   system-release-cpe
+binfmt.d                 fuse.conf      lvm                       qemu-ga                 systemd
+bluetooth                fwupd          machine-id                ras                     terminfo
+brlapi.key               gcrypt         magic                     rc.d                    tmpfiles.d
+brltty                   gdm            mailcap                   rc.local                tpm2-tss
+brltty.conf              geoclue        makedumpfile.conf.sample  redhat-release          trusted-key.key
+chromium                 glvnd          man_db.conf               request-key.conf        tuned
+chrony.conf              gnupg          mcelog                    request-key.d           udev
+chrony.keys              groff          microcode_ctl             resolv.conf             udisks2
+cifs-utils               group          mime.types                rocky-release           updatedb.conf
+cockpit                  group-         mke2fs.conf               rocky-release-upstream  usb_modeswitch.conf
+containers               grub.d         modprobe.d                rpc                     vconsole.conf
+cron.d                   grub2.cfg      modules-load.d            rpm                     vimrc
+cron.daily               gshadow        motd                      rsyncd.conf             virc
+cron.deny                gshadow-       motd.d                    rsyslog.conf            vmware-tools
+cron.hourly              gss            mtab                      rsyslog.d               vulkan
+cron.monthly             host.conf      multipath                 rwtab.d                 wgetrc
+cron.weekly              hostname       my.cnf                    samba                   wireplumber
+crontab                  hosts          my.cnf.d                  sane.d                  wpa_supplicant
+crypto-policies          hp             nanorc                    sasl2                   xattr.conf
+crypttab                 inittab        netconfig                 security                xdg
+csh.cshrc                inputrc        networks                  selinux                 xml
+csh.login                iscsi          nftables                  services                yum
+cups                     issue          nginx                     sestatus.conf           yum.conf
+cupshelpers              issue.d        nsswitch.conf             setroubleshoot          yum.repos.d
+dbus-1                   issue.net      nsswitch.conf.bak         sgml
+dconf                    kdump          nvme                      shadow
+debuginfod               kdump.conf     openldap                  shadow-
+[choi@vbox etc]$ more vimrc
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+" Avoid side effects when it was already reset.
+if &compatible
+  set nocompatible
+endif
+
+" When the +eval feature is missing, the set command above will be skipped.
+" Use a trick to reset compatible only when the +eval feature is missing.
+silent! while 0
+  set nocompatible
+silent! endwhile
+
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
+
+"set ai                 " always set autoindenting on
+"set backup             " keep a backup file
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more
+                        " than 50 lines of registers
+set history=50          " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+set showcmd             " display incomplete commands
+set wildmenu            " display completion matches in a status line
+
+set ttimeout            " time out for key codes
+set ttimeoutlen=100     " wait up to 100ms after Esc for special key
+
+" Show @@@ in the last line if it is truncated.
+set display=truncate
+
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching when it's possible to timeout.
+if has('reltime')
+  set incsearch
+endif
+
+" Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it
+" confusing.
+set nrformats-=octal
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  augroup redhat
+  autocmd!
+  " In text files, always limit the width of text to 78 characters
+  " autocmd BufRead *.txt set tw=78
+  " When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal! g'\"" |
+  \ endif
+  " don't write swapfile on most commonly used directories for NFS mounts or USB sticks
+  autocmd BufNewFile,BufReadPre /media/*,/run/media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
+  " start with spec file template
+  " 1724126 - do not open new file with .spec suffix with spec file template
+  " apparently there are other file types with .spec suffix, so disable the
+  " template
+  " autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
+  augroup END
+endif
+
+if has("cscope") && filereadable("/usr/bin/cscope")
+   set csprg=/usr/bin/cscope
+   set csto=0
+   set cst
+   set nocsverb
+[choi@vbox etc]$ $PS1
+bash: [\u@\h: 명령을 찾을 수 없습니다...
+[choi@vbox etc]$ echo $PS1
+[\u@\h \W]\$
+[choi@vbox etc]$ PS1 = "[\t][\u@\h \w]$ "
+bash: PS1: 명령을 찾을 수 없습니다...
+[choi@vbox etc]$ PS1="[\t][\u@\h \w]$ "
+[03:15:43][choi@vbox /etc]$ export PS1="[\t][\u@\h \w]$ "
+[03:16:11][choi@vbox /etc]$ echo $PS2
+>
+[03:16:32][choi@vbox /etc]$ history
+    1  man mkdir
+    2  mkdir -p mydir
+    3  sudo
+    4  sudo ls /etc
+    5  su -
+    6  sudo ls /etc
+    7  sudo dnf install mlocate
+    8  sudo ls -al /etc/localtime
+    9  sudo timedatectl set-timezone Asia/Seoul
+   10  sudo ls -al /etc/localtime
+   11  htop
+   12  sudo dnf install htop
+   13      sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm
+   14      sudo dnf install -y mysql-community-server
+   15  ls
+   16  dnf repolist enabled | grep mysql
+   17  dnf install mysql-server
+   18  sudo dnf install mysql-server
+   19  sudo rpm  --import /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql-2022
+   20  sudo dnf install mysql-server
+   21  rpm -q gpg-pubkey
+   22  sudo dnf remove mysql80-community-release
+   23  sudo dnf install https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm
+   24  sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+   25  rpm -q gpg-pubkey
+   26  sudo dnf replist all | grep mysql
+   27  sudo dnf repolist all | grep mysql
+   28  more /etc/yum.repos.d/mysql-community.repo
+   29  firewallctl --list-all
+   30  firewall-cmd --list-all
+   31  sudo firewall-cmd --list-all
+   32  sudo firewall-cmd --permanent --zone=public --add-service=http
+   33  sudo firewall-cmd --permanent --zone=public --add-service=https
+   34  sudo dnf install mysql-server
+   35  sudo dnf clean packages
+   36  sudo dnf install mysql-server
+   37  rpm -q gpg-pubkey
+   38  sudo dnf makecache
+   39  sudo dnf install mysql-server
+   40  sudo dnf update -y
+   41  sudo dnf install mysql-server
+   42  rpm -q gpg-pubkey
+   43  mysql --version
+   44  sudo systemctl start mysqld
+   45  sudo systemctl state mysqld
+   46  sudo systemctl status mysqld
+   47  sudo mysql_secure_installation
+   48  sudo grep 'temporary password' /var/log/mysqld.log
+   49  sudo mysql_secure_installation
+   50  sudo systemctl status mysqld
+   51  mysql -u root -p
+   52  ls
+   53  ll
+   54  ls -al
+   55  pwd
+   56  sudo ls /var/log
+   57  sudo ls -al /var/log
+   58  systemctl status mysqld
+   59  systemctl status firewall
+   60  systemctl status firewall-cmd
+   61  systemctl status firewalld
+   62  firewall-cmd --list-all
+   63  sudo firewall-cmd --list-all
+   64  pwed
+   65  pwd
+   66  ls
+   67  ls -al
+   68  su -
+   69  echo "Hello World" > test1.txt
+   70  ls
+   71  ls -all
+   72  ls -al
+   73  echo "Hello World"
+   74  sudo ls -al /var/log
+   75  systemctl status nginx
+   76  systemctl status mysql
+   77  systemctl status mysqld
+   78  firewall-cmd --list-all
+   79  sudo firewall-cmd --list-all
+   80  exit
+   81  sudo dnf install epel-release -y
+   82  sudo dnf install nginx -y
+   83  susdo systemctl start nginx
+   84  sudo systemctl start nginx
+   85  sudo systemctl enable nginx
+   86  sudo systemctl status nginx
+   87  sudo firewall-cmd --permanent --add-service=http
+   88  sudo firewall-cmd --permanent --add-service=https
+   89  sudo firewall-cmd --reload
+   90  eixt
+   91  exit
+   92  route
+   93  arp
+   94  ifconfig
+   95  tcpdump
+   96  sudo tcpdump -i enp0s8
+   97  sudo tcpdump -nn enp0s8
+   98  sudo tcpdump -i enp0s8 -nn
+   99  sudo tcpdump -i enp0s8 port not 22
+  100  sudo tcpdump -i enp0s8 port not 22 and port 33
+  101  nslookup www.google.com
+  102  clear
+  103  tcpdump -i enp0s3
+  104  sudo tcpdump -i enp0s3
+  105  cd /tmp
+  106  tcpdump -i enp0s3 -w test.pcap
+  107  sudo tcpdump -i enp0s3 -w test.pcap
+  108  exit
+  109  nslookup www.google.com
+  110  sytstemctl status nginx
+  111  systemctl status nginx
+  112  exit
+  113  sudo dnf install dhclient
+  114  nmcli device
+  115  nmcli connection down id enp0s3
+  116  sudo nmcli connection down id enp0s3
+  117  nmcli device
+  118  tcpdump -i enp0s3 port 67 or port 68 -n -w test_DHCP.pcap
+  119  sudo tcpdump -i enp0s3 port 67 or port 68 -n -w test_DHCP.pcap
+  120  exit
+  121  dhclient enp0s3 -r
+  122  sudo dhclient enp0s3 -r
+  123  sudo dhclient enp0s3
+  124  exit
+  125  nmcli connection down id enp0s3
+  126  sudo nmcli connection down id enp0s3
+  127  nmcli device
+  128  dhclient enp0s3 -r
+  129  sudo dhclient enp0s3 -r
+  130  nmcli device
+  131  sudo dhclient enp0s3
+  132  nmcli device
+  133  ifconfig
+  134  sudo dhclient enp0s3 -r
+  135  ifconfig
+  136  sudo dhclient enp0s3
+  137  ifconfig
+  138  sudo dnf install nmap
+  139  nmap www.google.com
+  140  nmap www.naver.com
+  141  nmap -sS www.google.com
+  142  sudo nmap -sS www.google.com
+  143  sudo nmap -O www.google.com
+  144  arp -a
+  145  arp -d 192.168.56.1
+  146  sudo arp -d 192.168.56.1
+  147  arp -a
+  148  exit
+  149  ls -al /etc | grep vimrc
+  150  cd /etc
+  151  ls
+  152  more vimrc
+  153  $PS1
+  154  echo $PS1
+  155  PS1 = "[\t][\u@\h \w]$ "
+  156  PS1="[\t][\u@\h \w]$ "
+  157  export PS1="[\t][\u@\h \w]$ "
+  158  echo $PS2
+  159  history
+[03:16:35][choi@vbox /etc]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[03:16:42][choi@vbox /etc]$ alias la='ls -al'
+[03:17:19][choi@vbox /etc]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias la='ls -al'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[03:17:22][choi@vbox /etc]$ alias la='ls -al --color=auto'
+[03:17:46][choi@vbox /etc]$ alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias la='ls -al --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+[03:17:48][choi@vbox /etc]$ cd ~
+[03:19:29][choi@vbox ~]$ pwd
+/home/choi
+[03:19:33][choi@vbox ~]$ nano ~/.bashrc
+[03:21:34][choi@vbox ~]$ ls
+mydir  test1.txt  test_DHCP.pcap  공개  다운로드  문서  바탕화면  비디오  사진  서식  음악
+[03:21:38][choi@vbox ~]$ la
+합계 48
+drwx------. 15 choi    choi    4096  7월  1 03:11 .
+drwxr-xr-x.  3 root    root      18  6월 30 22:13 ..
+-rw-------.  1 choi    choi     167  7월  1 03:10 .Xauthority
+-rw-------.  1 choi    choi    3490  7월  1 03:10 .bash_history
+-rw-r--r--.  1 choi    choi      18  4월 30  2024 .bash_logout
+-rw-r--r--.  1 choi    choi     141  4월 30  2024 .bash_profile
+-rw-r--r--.  1 choi    choi     521  7월  1 03:21 .bashrc
+drwx------. 10 choi    choi    4096  6월 30 22:15 .cache
+drwx------.  8 choi    choi    4096  6월 30 22:15 .config
+-rw-------.  1 choi    choi      20  7월  1 03:11 .lesshst
+drwx------.  4 choi    choi      32  6월 30 22:15 .local
+drwxr-xr-x.  4 choi    choi      39  6월 30 22:08 .mozilla
+-rw-------.  1 choi    choi      19  6월 30 23:17 .mysql_history
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:27 mydir
+-rw-r--r--.  1 choi    choi      12  6월 30 23:30 test1.txt
+-rw-r--r--.  1 tcpdump tcpdump 1952  7월  1 01:57 test_DHCP.pcap
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 공개
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 다운로드
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 문서
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 음악
+[03:21:40][choi@vbox ~]$ which la
+alias la='ls -al --color=auto'
+        /usr/bin/ls
+[03:21:50][choi@vbox ~]$ la head
+ls: cannot access 'head': 그런 파일이나 디렉터리가 없습니다
+[03:22:15][choi@vbox ~]$ hed la
+bash: hed: 명령을 찾을 수 없습니다...
+[03:22:19][choi@vbox ~]$ head la
+head: cannot open 'la' for reading: 그런 파일이나 디렉터리가 없습니다
+[03:22:22][choi@vbox ~]$ la | head -5
+합계 48
+drwx------. 15 choi    choi    4096  7월  1 03:11 .
+drwxr-xr-x.  3 root    root      18  6월 30 22:13 ..
+-rw-------.  1 choi    choi     167  7월  1 03:10 .Xauthority
+-rw-------.  1 choi    choi    3490  7월  1 03:10 .bash_history
+[03:23:10][choi@vbox ~]$ la | tail
+-rw-r--r--.  1 choi    choi      12  6월 30 23:30 test1.txt
+-rw-r--r--.  1 tcpdump tcpdump 1952  7월  1 01:57 test_DHCP.pcap
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 공개
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 다운로드
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 문서
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 음악
+[03:23:41][choi@vbox ~]$ la | tail -5
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x.  2 choi    choi       6  6월 30 22:15 음악
+[03:23:47][choi@vbox ~]$ mkdir -p mydir
+[03:24:13][choi@vbox ~]$ cd mydir
+[03:24:16][choi@vbox ~/mydir]$ ls -al
+합계 4
+drwxr-xr-x.  2 choi choi    6  6월 30 22:27 .
+drwx------. 15 choi choi 4096  7월  1 03:11 ..
+[03:24:21][choi@vbox ~/mydir]$ split -l 100 /etc/services service
+[03:24:38][choi@vbox ~/mydir]$ ls
+serviceaa  serviceal  serviceaw  servicebh  servicebs  servicecd  serviceco  servicecz  servicedk  servicedv  serviceeg
+serviceab  serviceam  serviceax  servicebi  servicebt  servicece  servicecp  serviceda  servicedl  servicedw  serviceeh
+serviceac  servicean  serviceay  servicebj  servicebu  servicecf  servicecq  servicedb  servicedm  servicedx  serviceei
+servicead  serviceao  serviceaz  servicebk  servicebv  servicecg  servicecr  servicedc  servicedn  servicedy  serviceej
+serviceae  serviceap  serviceba  servicebl  servicebw  servicech  servicecs  servicedd  servicedo  servicedz  serviceek
+serviceaf  serviceaq  servicebb  servicebm  servicebx  serviceci  servicect  servicede  servicedp  serviceea
+serviceag  servicear  servicebc  servicebn  serviceby  servicecj  servicecu  servicedf  servicedq  serviceeb
+serviceah  serviceas  servicebd  servicebo  servicebz  serviceck  servicecv  servicedg  servicedr  serviceec
+serviceai  serviceat  servicebe  servicebp  serviceca  servicecl  servicecw  servicedh  serviceds  serviceed
+serviceaj  serviceau  servicebf  servicebq  servicecb  servicecm  servicecx  servicedi  servicedt  serviceee
+serviceak  serviceav  servicebg  servicebr  servicecc  servicecn  servicecy  servicedj  servicedu  serviceef
+[03:24:40][choi@vbox ~/mydir]$ tar cvf services.tar service-*
+tar: service-*: stat할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+tar: 앞서 발생한 오류로 실패 코드를 반환하며 빠져나감
+[03:24:52][choi@vbox ~/mydir]$ tar cvf services.tar service-*
+tar: service-*: stat할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+tar: 앞서 발생한 오류로 실패 코드를 반환하며 빠져나감
+[03:25:06][choi@vbox ~/mydir]$ sudo tar cvf services.tar service-*
+[sudo] choi의 암호:
+tar: service-*: stat할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+tar: 앞서 발생한 오류로 실패 코드를 반환하며 빠져나감
+[03:25:13][choi@vbox ~/mydir]$ ^C
+[03:25:21][choi@vbox ~/mydir]$ tar -cvf services.tar service-*
+tar: service-*: stat할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+tar: 앞서 발생한 오류로 실패 코드를 반환하며 빠져나감
+[03:25:59][choi@vbox ~/mydir]$ mkdir services.tar
+mkdir: `services.tar' 디렉토리를 만들 수 없습니다: 파일이 있습니다
+[03:26:22][choi@vbox ~/mydir]$ ls
+serviceaa  serviceam  serviceay  servicebk  servicebw  serviceci  servicecu  servicedg  serviceds  serviceee
+serviceab  servicean  serviceaz  servicebl  servicebx  servicecj  servicecv  servicedh  servicedt  serviceef
+serviceac  serviceao  serviceba  servicebm  serviceby  serviceck  servicecw  servicedi  servicedu  serviceeg
+servicead  serviceap  servicebb  servicebn  servicebz  servicecl  servicecx  servicedj  servicedv  serviceeh
+serviceae  serviceaq  servicebc  servicebo  serviceca  servicecm  servicecy  servicedk  servicedw  serviceei
+serviceaf  servicear  servicebd  servicebp  servicecb  servicecn  servicecz  servicedl  servicedx  serviceej
+serviceag  serviceas  servicebe  servicebq  servicecc  serviceco  serviceda  servicedm  servicedy  serviceek
+serviceah  serviceat  servicebf  servicebr  servicecd  servicecp  servicedb  servicedn  servicedz  services.tar
+serviceai  serviceau  servicebg  servicebs  servicece  servicecq  servicedc  servicedo  serviceea
+serviceaj  serviceav  servicebh  servicebt  servicecf  servicecr  servicedd  servicedp  serviceeb
+serviceak  serviceaw  servicebi  servicebu  servicecg  servicecs  servicede  servicedq  serviceec
+serviceal  serviceax  servicebj  servicebv  servicech  servicect  servicedf  servicedr  serviceed
+[03:26:26][choi@vbox ~/mydir]$ tar -cvf services.tar service-*
+tar: service-*: stat할 수 없습니다: 그런 파일이나 디렉터리가 없습니다
+tar: 앞서 발생한 오류로 실패 코드를 반환하며 빠져나감
+[03:26:35][choi@vbox ~/mydir]$ tar -cvf services.tar service*
+serviceaa
+serviceab
+serviceac
+servicead
+serviceae
+serviceaf
+serviceag
+serviceah
+serviceai
+serviceaj
+serviceak
+serviceal
+serviceam
+servicean
+serviceao
+serviceap
+serviceaq
+servicear
+serviceas
+serviceat
+serviceau
+serviceav
+serviceaw
+serviceax
+serviceay
+serviceaz
+serviceba
+servicebb
+servicebc
+servicebd
+servicebe
+servicebf
+servicebg
+servicebh
+servicebi
+servicebj
+servicebk
+servicebl
+servicebm
+servicebn
+servicebo
+servicebp
+servicebq
+servicebr
+servicebs
+servicebt
+servicebu
+servicebv
+servicebw
+servicebx
+serviceby
+servicebz
+serviceca
+servicecb
+servicecc
+servicecd
+servicece
+servicecf
+servicecg
+servicech
+serviceci
+servicecj
+serviceck
+servicecl
+servicecm
+servicecn
+serviceco
+servicecp
+servicecq
+servicecr
+servicecs
+servicect
+servicecu
+servicecv
+servicecw
+servicecx
+servicecy
+servicecz
+serviceda
+servicedb
+servicedc
+servicedd
+servicede
+servicedf
+servicedg
+servicedh
+servicedi
+servicedj
+servicedk
+servicedl
+servicedm
+servicedn
+servicedo
+servicedp
+servicedq
+servicedr
+serviceds
+servicedt
+servicedu
+servicedv
+servicedw
+servicedx
+servicedy
+servicedz
+serviceea
+serviceeb
+serviceec
+serviceed
+serviceee
+serviceef
+serviceeg
+serviceeh
+serviceei
+serviceej
+serviceek
+tar: services.tar: 아카이브 파일입니다. 덤프 가져오지 않음
+[03:26:52][choi@vbox ~/mydir]$ ls
+serviceaa  serviceam  serviceay  servicebk  servicebw  serviceci  servicecu  servicedg  serviceds  serviceee
+serviceab  servicean  serviceaz  servicebl  servicebx  servicecj  servicecv  servicedh  servicedt  serviceef
+serviceac  serviceao  serviceba  servicebm  serviceby  serviceck  servicecw  servicedi  servicedu  serviceeg
+servicead  serviceap  servicebb  servicebn  servicebz  servicecl  servicecx  servicedj  servicedv  serviceeh
+serviceae  serviceaq  servicebc  servicebo  serviceca  servicecm  servicecy  servicedk  servicedw  serviceei
+serviceaf  servicear  servicebd  servicebp  servicecb  servicecn  servicecz  servicedl  servicedx  serviceej
+serviceag  serviceas  servicebe  servicebq  servicecc  serviceco  serviceda  servicedm  servicedy  serviceek
+serviceah  serviceat  servicebf  servicebr  servicecd  servicecp  servicedb  servicedn  servicedz  services.tar
+serviceai  serviceau  servicebg  servicebs  servicece  servicecq  servicedc  servicedo  serviceea
+serviceaj  serviceav  servicebh  servicebt  servicecf  servicecr  servicedd  servicedp  serviceeb
+serviceak  serviceaw  servicebi  servicebu  servicecg  servicecs  servicede  servicedq  serviceec
+serviceal  serviceax  servicebj  servicebv  servicech  servicect  servicedf  servicedr  serviceed
+[03:26:55][choi@vbox ~/mydir]$ tar czvf services.tar.gz service*
+serviceaa
+serviceab
+serviceac
+servicead
+serviceae
+serviceaf
+serviceag
+serviceah
+serviceai
+serviceaj
+serviceak
+serviceal
+serviceam
+servicean
+serviceao
+serviceap
+serviceaq
+servicear
+serviceas
+serviceat
+serviceau
+serviceav
+serviceaw
+serviceax
+serviceay
+serviceaz
+serviceba
+servicebb
+servicebc
+servicebd
+servicebe
+servicebf
+servicebg
+servicebh
+servicebi
+servicebj
+servicebk
+servicebl
+servicebm
+servicebn
+servicebo
+servicebp
+servicebq
+servicebr
+servicebs
+servicebt
+servicebu
+servicebv
+servicebw
+servicebx
+serviceby
+servicebz
+serviceca
+servicecb
+servicecc
+servicecd
+servicece
+servicecf
+servicecg
+servicech
+serviceci
+servicecj
+serviceck
+servicecl
+servicecm
+servicecn
+serviceco
+servicecp
+servicecq
+servicecr
+servicecs
+servicect
+servicecu
+servicecv
+servicecw
+servicecx
+servicecy
+servicecz
+serviceda
+servicedb
+servicedc
+servicedd
+servicede
+servicedf
+servicedg
+servicedh
+servicedi
+servicedj
+servicedk
+servicedl
+servicedm
+servicedn
+servicedo
+servicedp
+servicedq
+servicedr
+serviceds
+servicedt
+servicedu
+servicedv
+servicedw
+servicedx
+servicedy
+servicedz
+serviceea
+serviceeb
+serviceec
+serviceed
+serviceee
+serviceef
+serviceeg
+serviceeh
+serviceei
+serviceej
+serviceek
+services.tar
+[03:27:12][choi@vbox ~/mydir]$ ls
+serviceaa  serviceam  serviceay  servicebk  servicebw  serviceci  servicecu  servicedg  serviceds  serviceee
+serviceab  servicean  serviceaz  servicebl  servicebx  servicecj  servicecv  servicedh  servicedt  serviceef
+serviceac  serviceao  serviceba  servicebm  serviceby  serviceck  servicecw  servicedi  servicedu  serviceeg
+servicead  serviceap  servicebb  servicebn  servicebz  servicecl  servicecx  servicedj  servicedv  serviceeh
+serviceae  serviceaq  servicebc  servicebo  serviceca  servicecm  servicecy  servicedk  servicedw  serviceei
+serviceaf  servicear  servicebd  servicebp  servicecb  servicecn  servicecz  servicedl  servicedx  serviceej
+serviceag  serviceas  servicebe  servicebq  servicecc  serviceco  serviceda  servicedm  servicedy  serviceek
+serviceah  serviceat  servicebf  servicebr  servicecd  servicecp  servicedb  servicedn  servicedz  services.tar
+serviceai  serviceau  servicebg  servicebs  servicece  servicecq  servicedc  servicedo  serviceea  services.tar.gz
+serviceaj  serviceav  servicebh  servicebt  servicecf  servicecr  servicedd  servicedp  serviceeb
+serviceak  serviceaw  servicebi  servicebu  servicecg  servicecs  servicede  servicedq  serviceec
+serviceal  serviceax  servicebj  servicebv  servicech  servicect  servicedf  servicedr  serviceed
+[03:27:18][choi@vbox ~/mydir]$ ls -l
+합계 1980
+-rw-r--r--. 1 choi choi   4890  7월  1 03:24 serviceaa
+-rw-r--r--. 1 choi choi   5273  7월  1 03:24 serviceab
+-rw-r--r--. 1 choi choi   4646  7월  1 03:24 serviceac
+-rw-r--r--. 1 choi choi   5583  7월  1 03:24 servicead
+-rw-r--r--. 1 choi choi   6177  7월  1 03:24 serviceae
+-rw-r--r--. 1 choi choi   5914  7월  1 03:24 serviceaf
+-rw-r--r--. 1 choi choi   6297  7월  1 03:24 serviceag
+-rw-r--r--. 1 choi choi   5809  7월  1 03:24 serviceah
+-rw-r--r--. 1 choi choi   6002  7월  1 03:24 serviceai
+-rw-r--r--. 1 choi choi   6009  7월  1 03:24 serviceaj
+-rw-r--r--. 1 choi choi   5966  7월  1 03:24 serviceak
+-rw-r--r--. 1 choi choi   5600  7월  1 03:24 serviceal
+-rw-r--r--. 1 choi choi   5304  7월  1 03:24 serviceam
+-rw-r--r--. 1 choi choi   5737  7월  1 03:24 servicean
+-rw-r--r--. 1 choi choi   5667  7월  1 03:24 serviceao
+-rw-r--r--. 1 choi choi   5432  7월  1 03:24 serviceap
+-rw-r--r--. 1 choi choi   6444  7월  1 03:24 serviceaq
+-rw-r--r--. 1 choi choi   5945  7월  1 03:24 servicear
+-rw-r--r--. 1 choi choi   6131  7월  1 03:24 serviceas
+-rw-r--r--. 1 choi choi   6109  7월  1 03:24 serviceat
+-rw-r--r--. 1 choi choi   5556  7월  1 03:24 serviceau
+-rw-r--r--. 1 choi choi   5408  7월  1 03:24 serviceav
+-rw-r--r--. 1 choi choi   5494  7월  1 03:24 serviceaw
+-rw-r--r--. 1 choi choi   6336  7월  1 03:24 serviceax
+-rw-r--r--. 1 choi choi   6506  7월  1 03:24 serviceay
+-rw-r--r--. 1 choi choi   6041  7월  1 03:24 serviceaz
+-rw-r--r--. 1 choi choi   5931  7월  1 03:24 serviceba
+-rw-r--r--. 1 choi choi   5434  7월  1 03:24 servicebb
+-rw-r--r--. 1 choi choi   5797  7월  1 03:24 servicebc
+-rw-r--r--. 1 choi choi   5402  7월  1 03:24 servicebd
+-rw-r--r--. 1 choi choi   5492  7월  1 03:24 servicebe
+-rw-r--r--. 1 choi choi   5674  7월  1 03:24 servicebf
+-rw-r--r--. 1 choi choi   5418  7월  1 03:24 servicebg
+-rw-r--r--. 1 choi choi   6154  7월  1 03:24 servicebh
+-rw-r--r--. 1 choi choi   5738  7월  1 03:24 servicebi
+-rw-r--r--. 1 choi choi   5148  7월  1 03:24 servicebj
+-rw-r--r--. 1 choi choi   5900  7월  1 03:24 servicebk
+-rw-r--r--. 1 choi choi   5577  7월  1 03:24 servicebl
+-rw-r--r--. 1 choi choi   6479  7월  1 03:24 servicebm
+-rw-r--r--. 1 choi choi   6227  7월  1 03:24 servicebn
+-rw-r--r--. 1 choi choi   6220  7월  1 03:24 servicebo
+-rw-r--r--. 1 choi choi   5542  7월  1 03:24 servicebp
+-rw-r--r--. 1 choi choi   5724  7월  1 03:24 servicebq
+-rw-r--r--. 1 choi choi   5568  7월  1 03:24 servicebr
+-rw-r--r--. 1 choi choi   5730  7월  1 03:24 servicebs
+-rw-r--r--. 1 choi choi   5472  7월  1 03:24 servicebt
+-rw-r--r--. 1 choi choi   5479  7월  1 03:24 servicebu
+-rw-r--r--. 1 choi choi   5473  7월  1 03:24 servicebv
+-rw-r--r--. 1 choi choi   5522  7월  1 03:24 servicebw
+-rw-r--r--. 1 choi choi   5205  7월  1 03:24 servicebx
+-rw-r--r--. 1 choi choi   5740  7월  1 03:24 serviceby
+-rw-r--r--. 1 choi choi   5326  7월  1 03:24 servicebz
+-rw-r--r--. 1 choi choi   5403  7월  1 03:24 serviceca
+-rw-r--r--. 1 choi choi   5464  7월  1 03:24 servicecb
+-rw-r--r--. 1 choi choi   5657  7월  1 03:24 servicecc
+-rw-r--r--. 1 choi choi   5654  7월  1 03:24 servicecd
+-rw-r--r--. 1 choi choi   6072  7월  1 03:24 servicece
+-rw-r--r--. 1 choi choi   5922  7월  1 03:24 servicecf
+-rw-r--r--. 1 choi choi   6272  7월  1 03:24 servicecg
+-rw-r--r--. 1 choi choi   5912  7월  1 03:24 servicech
+-rw-r--r--. 1 choi choi   5666  7월  1 03:24 serviceci
+-rw-r--r--. 1 choi choi   5725  7월  1 03:24 servicecj
+-rw-r--r--. 1 choi choi   6218  7월  1 03:24 serviceck
+-rw-r--r--. 1 choi choi   5948  7월  1 03:24 servicecl
+-rw-r--r--. 1 choi choi   5982  7월  1 03:24 servicecm
+-rw-r--r--. 1 choi choi   6038  7월  1 03:24 servicecn
+-rw-r--r--. 1 choi choi   6106  7월  1 03:24 serviceco
+-rw-r--r--. 1 choi choi   6186  7월  1 03:24 servicecp
+-rw-r--r--. 1 choi choi   6102  7월  1 03:24 servicecq
+-rw-r--r--. 1 choi choi   6118  7월  1 03:24 servicecr
+-rw-r--r--. 1 choi choi   6312  7월  1 03:24 servicecs
+-rw-r--r--. 1 choi choi   6238  7월  1 03:24 servicect
+-rw-r--r--. 1 choi choi   6316  7월  1 03:24 servicecu
+-rw-r--r--. 1 choi choi   6122  7월  1 03:24 servicecv
+-rw-r--r--. 1 choi choi   6280  7월  1 03:24 servicecw
+-rw-r--r--. 1 choi choi   6485  7월  1 03:24 servicecx
+-rw-r--r--. 1 choi choi   6566  7월  1 03:24 servicecy
+-rw-r--r--. 1 choi choi   6657  7월  1 03:24 servicecz
+-rw-r--r--. 1 choi choi   6551  7월  1 03:24 serviceda
+-rw-r--r--. 1 choi choi   6200  7월  1 03:24 servicedb
+-rw-r--r--. 1 choi choi   6306  7월  1 03:24 servicedc
+-rw-r--r--. 1 choi choi   6588  7월  1 03:24 servicedd
+-rw-r--r--. 1 choi choi   6570  7월  1 03:24 servicede
+-rw-r--r--. 1 choi choi   6082  7월  1 03:24 servicedf
+-rw-r--r--. 1 choi choi   6385  7월  1 03:24 servicedg
+-rw-r--r--. 1 choi choi   6365  7월  1 03:24 servicedh
+-rw-r--r--. 1 choi choi   6096  7월  1 03:24 servicedi
+-rw-r--r--. 1 choi choi   6528  7월  1 03:24 servicedj
+-rw-r--r--. 1 choi choi   6638  7월  1 03:24 servicedk
+-rw-r--r--. 1 choi choi   6464  7월  1 03:24 servicedl
+-rw-r--r--. 1 choi choi   6247  7월  1 03:24 servicedm
+-rw-r--r--. 1 choi choi   7144  7월  1 03:24 servicedn
+-rw-r--r--. 1 choi choi   6370  7월  1 03:24 servicedo
+-rw-r--r--. 1 choi choi   6354  7월  1 03:24 servicedp
+-rw-r--r--. 1 choi choi   6040  7월  1 03:24 servicedq
+-rw-r--r--. 1 choi choi   6819  7월  1 03:24 servicedr
+-rw-r--r--. 1 choi choi   6556  7월  1 03:24 serviceds
+-rw-r--r--. 1 choi choi   6355  7월  1 03:24 servicedt
+-rw-r--r--. 1 choi choi   6703  7월  1 03:24 servicedu
+-rw-r--r--. 1 choi choi   5973  7월  1 03:24 servicedv
+-rw-r--r--. 1 choi choi   6478  7월  1 03:24 servicedw
+-rw-r--r--. 1 choi choi   6412  7월  1 03:24 servicedx
+-rw-r--r--. 1 choi choi   6330  7월  1 03:24 servicedy
+-rw-r--r--. 1 choi choi   6577  7월  1 03:24 servicedz
+-rw-r--r--. 1 choi choi   6189  7월  1 03:24 serviceea
+-rw-r--r--. 1 choi choi   6706  7월  1 03:24 serviceeb
+-rw-r--r--. 1 choi choi   6817  7월  1 03:24 serviceec
+-rw-r--r--. 1 choi choi   7014  7월  1 03:24 serviceed
+-rw-r--r--. 1 choi choi   6167  7월  1 03:24 serviceee
+-rw-r--r--. 1 choi choi   6469  7월  1 03:24 serviceef
+-rw-r--r--. 1 choi choi   5939  7월  1 03:24 serviceeg
+-rw-r--r--. 1 choi choi   6565  7월  1 03:24 serviceeh
+-rw-r--r--. 1 choi choi   6536  7월  1 03:24 serviceei
+-rw-r--r--. 1 choi choi   6512  7월  1 03:24 serviceej
+-rw-r--r--. 1 choi choi   5138  7월  1 03:24 serviceek
+-rw-r--r--. 1 choi choi 788480  7월  1 03:26 services.tar
+-rw-r--r--. 1 choi choi 293410  7월  1 03:27 services.tar.gz
+[03:27:22][choi@vbox ~/mydir]$ date
+2025. 07. 01. (화) 03:27:32 KST
+[03:27:32][choi@vbox ~/mydir]$ date -u
+2025. 06. 30. (월) 18:27:46 UTC
+[03:27:46][choi@vbox ~/mydir]$ timedatectl
+               Local time: 화 2025-07-01 03:27:54 KST
+           Universal time: 월 2025-06-30 18:27:54 UTC
+                 RTC time: 월 2025-06-30 18:09:20
+                Time zone: Asia/Seoul (KST, +0900)
+System clock synchronized: no
+              NTP service: active
+          RTC in local TZ: no
+[03:27:54][choi@vbox ~/mydir]$ date -s "2025-07-01 13:07:00"
+date: cannot set date: 명령을 허용하지 않음
+2025. 07. 01. (화) 13:07:00 KST
+[03:28:25][choi@vbox ~/mydir]$ sudo date -s "2025-07-01 13:07:00"
+2025. 07. 01. (화) 13:07:00 KST
+[13:07:00][choi@vbox ~/mydir]$ date
+2025. 07. 01. (화) 13:07:05 KST
+[13:07:05][choi@vbox ~/mydir]$ ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.4 175476 18512 ?        Ss   08:03   0:19 /usr/lib/systemd/systemd rhgb --system --deserialize
+root           2  0.0  0.0      0     0 ?        S    08:03   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    08:03   0:00 [pool_workqueue_]
+root           4  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-rcu_g]
+root           5  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-sync_]
+root           6  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-slub_]
+root           7  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-netns]
+root           9  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I    08:03   0:00 [kworker/u16:0-events_unbound]
+root          11  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-mm_pe]
+root          12  0.0  0.0      0     0 ?        I    08:03   0:00 [kworker/u16:1-netns]
+root          13  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_kthre]
+root          14  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_rude_]
+root          15  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_trace]
+root          16  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/0]
+root          17  0.0  0.0      0     0 ?        I    08:03   0:02 [rcu_preempt]
+root          18  0.0  0.0      0     0 ?        S    08:03   0:00 [rcu_exp_par_gp_]
+root          19  0.0  0.0      0     0 ?        S    08:03   0:00 [rcu_exp_gp_kthr]
+root          20  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/0]
+root          21  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/0]
+root          23  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/0]
+root          24  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/1]
+root          25  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/1]
+root          26  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/1]
+root          27  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/1]
+root          30  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/2]
+root          31  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/2]
+root          32  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/2]
+root          33  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/2]
+root          35  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/2:0H-events_highpri]
+root          36  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/3]
+root          37  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/3]
+root          38  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/3]
+root          39  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/3]
+root          41  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/3:0H-events_highpri]
+root          48  0.0  0.0      0     0 ?        S    08:03   0:00 [kdevtmpfs]
+root          49  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-inet_]
+root          50  0.0  0.0      0     0 ?        S    08:03   0:00 [kauditd]
+root          51  0.0  0.0      0     0 ?        S    08:03   0:00 [khungtaskd]
+root          52  0.0  0.0      0     0 ?        S    08:03   0:00 [oom_reaper]
+root          54  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-write]
+root          56  0.0  0.0      0     0 ?        S    08:03   0:00 [kcompactd0]
+root          57  0.0  0.0      0     0 ?        SN   08:03   0:00 [ksmd]
+root          58  0.0  0.0      0     0 ?        SN   08:03   0:00 [khugepaged]
+root          59  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-crypt]
+root          60  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kinte]
+root          61  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kbloc]
+root          62  0.0  0.0      0     0 ?        S    08:03   0:00 [irq/9-acpi]
+root          64  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-tpm_d]
+root          65  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-md]
+root          66  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-md_bi]
+root          67  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-edac-]
+root          68  0.0  0.0      0     0 ?        S    08:03   0:00 [watchdogd]
+root          71  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/3:1H-kblockd]
+root          72  0.0  0.0      0     0 ?        S    08:03   0:00 [kswapd0]
+root          73  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kthro]
+root          77  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-acpi_]
+root          79  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kmpat]
+root          80  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kalua]
+root          82  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-mld]
+root          83  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/0:1H-kblockd]
+root          84  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ipv6_]
+root          95  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kstrp]
+root         100  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u21:0]
+root         101  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u22:0]
+root         102  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u23:0]
+root         103  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u24:0]
+root         104  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u25:0]
+root         219  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/2:1H-kblockd]
+root         257  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/1:1H-kblockd]
+root         444  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ata_s]
+root         447  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_0]
+root         448  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_1]
+root         449  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         450  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_2]
+root         451  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         452  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         461  0.0  0.0      0     0 ?        S    08:03   0:00 [irq/18-vmwgfx]
+root         462  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ttm]
+root         498  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/1:2H-kblockd]
+root         540  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kdmfl]
+root         547  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kdmfl]
+root         565  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfsal]
+root         566  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs_m]
+root         567  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         568  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         569  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-r]
+root         570  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         571  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-i]
+root         572  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-l]
+root         573  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         574  0.0  0.0      0     0 ?        S    08:03   0:01 [xfsaild/dm-0]
+root         762  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         763  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         764  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-r]
+root         765  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         766  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-i]
+root         767  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-l]
+root         768  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         769  0.0  0.0      0     0 ?        S    08:03   0:00 [xfsaild/sda1]
+root         775  0.0  0.0  96340  2968 ?        S<sl 08:03   0:00 /sbin/auditd
+root         777  0.0  0.0   7948  3584 ?        S<   08:03   0:00 /usr/sbin/sedispatch
+dbus         803  0.0  0.1  12668  6340 ?        Ss   08:03   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+dbus         804  0.0  0.1  10700  6068 ?        S    08:03   0:01 dbus-broker --log 4 --controller 9 --machine-id 89a22
+avahi        805  0.0  0.1  16648  6656 ?        Ss   08:03   0:00 avahi-daemon: running [linux.local]
+root         808  0.0  0.1  82624  3840 ?        Ssl  08:03   0:00 /usr/sbin/irqbalance
+libstor+     809  0.0  0.0   2704  1536 ?        Ss   08:03   0:00 /usr/bin/lsmd -d
+root         810  0.0  0.0   3336  1920 ?        Ss   08:03   0:00 /usr/sbin/mcelog --daemon --foreground
+polkitd      811  0.0  0.7 2650228 26932 ?       Ssl  08:03   0:01 /usr/lib/polkit-1/polkitd --no-debug
+rtkit        812  0.0  0.0 153988  3328 ?        SNsl 08:03   0:00 /usr/libexec/rtkit-daemon
+root         813  0.0  0.3 534292 12388 ?        Ssl  08:03   0:00 /usr/libexec/accounts-daemon
+root         814  0.0  0.2 448296  8484 ?        Ssl  08:03   0:00 /usr/libexec/switcheroo-control
+root         817  0.0  0.3  31616 14804 ?        Ss   08:03   0:00 /usr/lib/systemd/systemd-logind
+root         818  0.0  0.3 395448 13392 ?        Ssl  08:03   0:00 /usr/libexec/udisks2/udisksd
+root         821  0.0  0.2 448880  8732 ?        Ssl  08:03   0:00 /usr/libexec/upowerd
+avahi        825  0.0  0.0  16648  2000 ?        S    08:03   0:00 avahi-daemon: chroot helper
+root         835  0.0  0.0   4732  2816 ?        SNs  08:03   0:00 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/et
+chrony       845  0.0  0.1  84944  4292 ?        S    08:03   0:00 /usr/sbin/chronyd -F 2
+root         852  0.0  0.3 391332 12256 ?        Ssl  08:03   0:00 /usr/sbin/ModemManager
+root         854  0.0  1.3 584644 50504 ?        Ssl  08:03   0:01 /usr/bin/python3 -s /usr/sbin/firewalld --nofork --no
+root         919  0.0  0.6 477224 23644 ?        Ssl  08:03   0:01 /usr/sbin/NetworkManager --no-daemon
+root         939  0.0  0.2 248824 11136 ?        Ss   08:03   0:00 /usr/sbin/cupsd -l
+root         942  0.0  0.2  18756  9856 ?        Ss   08:03   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startu
+root         951  0.0  0.1  12472  4864 ?        Ss   08:03   0:00 /usr/sbin/atd -f
+root         956  0.0  0.3 461424 13256 ?        Ssl  08:03   0:00 /usr/sbin/gdm
+root        1053  0.0  0.2 165140 10112 ?        Ssl  08:03   0:02 /usr/sbin/rsyslogd -n
+root        1609  0.0  0.1  16648  6400 ?        Ss   08:03   0:00 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_s
+colord      1775  0.0  0.4 530428 16048 ?        Ssl  08:03   0:00 /usr/libexec/colord
+root        1941  0.0  0.4 536556 15020 ?        Sl   08:04   0:00 gdm-session-worker [pam/gdm-password]
+choi        1964  0.0  0.3  24512 14484 ?        Ss   08:04   0:00 /usr/lib/systemd/systemd --user
+choi        1966  0.0  0.2  27900  7692 ?        S    08:04   0:00 (sd-pam)
+choi        1981  0.0  0.1 452992  6840 ?        Sl   08:04   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+choi        1985  0.0  0.2 374328  8032 tty2     Ssl+ 08:04   0:00 /usr/libexec/gdm-wayland-session --register-session g
+choi        1989  0.0  0.1  10672  4352 ?        Ss   08:04   0:00 /usr/bin/dbus-broker-launch --scope user
+choi        1992  0.0  0.1   6744  4352 ?        S    08:04   0:00 dbus-broker --log 4 --controller 9 --machine-id 89a22
+choi        1994  0.0  0.5 513336 19356 tty2     Sl+  08:04   0:00 /usr/libexec/gnome-session-binary
+choi        2029  0.0  0.2 303664  7488 ?        Ssl  08:04   0:00 /usr/libexec/gnome-session-ctl --monitor
+choi        2031  0.0  0.6 939868 22940 ?        Ssl  08:04   0:00 /usr/libexec/gnome-session-binary --systemd-service -
+choi        2047  0.0 10.8 5217052 404672 ?      Ssl  08:04   0:18 /usr/bin/gnome-shell
+choi        2064  0.0  0.2 452788  9912 ?        Ssl  08:04   0:00 /usr/libexec/gvfsd
+choi        2069  0.0  0.2 379912 10440 ?        Sl   08:04   0:01 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+choi        2077  0.0  0.2 308444  9404 ?        Ssl  08:04   0:00 /usr/libexec/at-spi-bus-launcher
+choi        2082  0.0  0.1  10428  4224 ?        S    08:04   0:00 /usr/bin/dbus-broker-launch --config-file=/usr/share/
+choi        2083  0.0  0.0   5004  2560 ?        S    08:04   0:00 dbus-broker --log 4 --controller 9 --machine-id 89a22
+choi        2091  0.0  0.4 526928 15432 ?        Sl   08:04   0:00 ibus-daemon --panel disable
+choi        2095  0.0  0.3 449396 11324 ?        Sl   08:04   0:00 /usr/libexec/ibus-dconf
+choi        2096  0.0  0.8 596296 33392 ?        Sl   08:04   0:00 /usr/libexec/ibus-extension-gtk3
+choi        2097  0.0  0.2 449320  9320 ?        Ssl  08:04   0:00 /usr/libexec/ibus-portal
+choi        2103  0.0  0.5 586452 21976 ?        Ssl  08:04   0:00 /usr/libexec/gnome-shell-calendar-server
+choi        2104  0.0  0.2 448408  8268 ?        Ssl  08:04   0:00 /usr/libexec/xdg-permission-store
+choi        2119  0.0  0.8 1287880 29948 ?       Ssl  08:04   0:00 /usr/libexec/evolution-source-registry
+choi        2120  0.0  0.3 326552 14272 ?        S<sl 08:04   0:00 /usr/bin/pipewire
+choi        2121  0.0  0.5 547244 21416 ?        S<sl 08:04   0:00 /usr/bin/wireplumber
+choi        2122  0.0  0.2 316704  9344 ?        S<sl 08:04   0:00 /usr/bin/pipewire-pulse
+choi        2142  0.0  0.6 820640 25272 ?        Ssl  08:04   0:00 /usr/libexec/goa-daemon
+choi        2157  0.0  0.3 532788 14216 ?        Ssl  08:04   0:01 /usr/libexec/goa-identity-service
+choi        2160  0.0  0.9 1592412 34064 ?       Ssl  08:04   0:00 /usr/libexec/evolution-calendar-factory
+choi        2170  0.0  0.3 527820 12124 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+choi        2179  0.0  0.2 448424 10432 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+choi        2190  0.0  0.2 450248  9132 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+choi        2194  0.0  0.1 155856  5504 ?        Ssl  08:04   0:00 /usr/libexec/dconf-service
+choi        2204  0.0  0.8 890008 30496 ?        Ssl  08:04   0:00 /usr/libexec/evolution-addressbook-factory
+choi        2205  0.0  0.2 448500 10592 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-goa-volume-monitor
+choi        2225  0.0  0.7 2800956 26904 ?       Ssl  08:04   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.N
+choi        2227  0.0  0.1 161588  7168 ?        Ssl  08:04   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+choi        2229  0.0  0.2 522508  8920 ?        Ssl  08:04   0:00 /usr/libexec/gsd-a11y-settings
+choi        2235  0.0  0.8 666692 31168 ?        Ssl  08:04   0:00 /usr/libexec/gsd-color
+choi        2238  0.0  0.5 595528 21084 ?        Ssl  08:04   0:00 /usr/libexec/gsd-datetime
+choi        2241  0.0  0.3 524880 12160 ?        Ssl  08:04   0:00 /usr/libexec/gsd-housekeeping
+choi        2245  0.0  4.8 1715084 180972 ?      Sl   08:04   0:05 /usr/bin/gnome-software --gapplication-service
+choi        2248  0.0  0.1 232032  7296 ?        Sl   08:04   0:00 /usr/libexec/gsd-disk-utility-notify
+choi        2263  0.0  0.7 590792 29756 ?        Ssl  08:04   0:00 /usr/libexec/gsd-keyboard
+choi        2265  0.0  1.4 890832 53788 ?        Sl   08:04   0:00 /usr/libexec/evolution-data-server/evolution-alarm-no
+choi        2269  0.0  0.8 809548 32952 ?        Ssl  08:04   0:00 /usr/libexec/gsd-media-keys
+choi        2270  0.0  0.7 592288 29504 ?        Ssl  08:04   0:00 /usr/libexec/gsd-power
+choi        2271  0.0  0.4 468316 15420 ?        Ssl  08:04   0:00 /usr/libexec/gsd-print-notifications
+choi        2272  0.0  0.2 669868 10784 ?        Ssl  08:04   0:00 /usr/libexec/gsd-rfkill
+choi        2275  0.0  0.2 448268 10380 ?        Ssl  08:04   0:00 /usr/libexec/gsd-screensaver-proxy
+choi        2290  0.0  0.3 678636 13004 ?        Ssl  08:04   0:00 /usr/libexec/gsd-sharing
+choi        2307  0.0  0.3 603788 14144 ?        Ssl  08:04   0:01 /usr/libexec/gsd-smartcard
+choi        2311  0.0  0.3 530996 12484 ?        Ssl  08:04   0:00 /usr/libexec/gsd-sound
+choi        2312  0.0  0.2 598124  9460 ?        Ssl  08:04   0:00 /usr/libexec/gsd-usb-protection
+choi        2322  0.0  0.8 665168 30148 ?        Ssl  08:04   0:00 /usr/libexec/gsd-wacom
+choi        2358  0.0  0.8 2800956 30660 ?       Ssl  08:04   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenS
+choi        2372  0.0  0.2 375560  9300 ?        Sl   08:04   0:00 /usr/libexec/ibus-engine-simple
+choi        2407  0.0  0.5 844000 22044 ?        Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal
+choi        2413  0.0  0.2 744120  8976 ?        Ssl  08:04   0:00 /usr/libexec/xdg-document-portal
+root        2423  0.0  0.0   2652  1664 ?        Ss   08:04   0:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmo
+choi        2429  0.0  1.6 1050400 61044 ?       Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal-gnome
+choi        2451  0.0  0.5 599568 22196 ?        Sl   08:04   0:00 /usr/libexec/gsd-printer
+choi        2560  0.0  0.8 591912 31948 ?        Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root        2576  0.0  0.7 565984 29072 ?        Ssl  08:04   0:01 /usr/libexec/fwupd/fwupd
+choi        2697  0.0  4.9 2039244 184656 ?      Sl   08:04   0:02 gnome-control-center network
+choi        2765  0.0  0.2 527000 10968 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-trash --spawner :1.17 /org/gtk/gvf
+choi        2781  0.0  0.3 748540 13488 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-network --spawner :1.17 /org/gtk/g
+choi        2793  0.0  0.2 529104 11228 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-dnssd --spawner :1.17 /org/gtk/gvf
+choi        2813  0.0  0.2 374936  8064 ?        Ssl  08:05   0:00 /usr/libexec/gvfsd-metadata
+root        4524  0.0  0.0      0     0 ?        I<   08:09   0:00 [kworker/R-tls-s]
+root       16910  0.0  0.0 223940  3584 ?        Ss   08:41   0:00 /usr/sbin/crond -n
+root       58035  0.0  0.3  27624 12672 ?        Ss   08:43   0:00 /usr/lib/systemd/systemd-journald
+root       58049  0.0  0.3  38688 13444 ?        Ss   08:43   0:00 /usr/lib/systemd/systemd-udevd
+root       58104  0.0  0.7 483768 29612 ?        Ssl  08:43   0:04 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+root       58557  0.0  0.7 482224 29628 ?        Ssl  08:43   0:02 /usr/bin/python3 -Es /usr/sbin/tuned-ppd -l
+mysql      90412  0.4 11.4 2398300 429196 ?      Ssl  08:46   1:09 /usr/sbin/mysqld
+root      101371  0.0  0.0  15208  1868 ?        Ss   09:21   0:00 nginx: master process /usr/sbin/nginx
+nginx     101372  0.0  0.1  15636  3916 ?        S    09:21   0:00 nginx: worker process
+nginx     101373  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+nginx     101374  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+nginx     101375  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+root      105025  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib-co]
+root      105026  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib-co]
+root      105027  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib_mc]
+root      105028  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib_nl]
+root      109623  0.0  0.0      0     0 ?        I    09:44   0:00 [kworker/u19:2-events_unbound]
+root      140017  0.0  0.0      0     0 ?        R    11:09   0:00 [kworker/u17:2-events_unbound]
+root      141743  0.0  0.0      0     0 ?        I    11:14   0:00 [kworker/u19:0-flush-253:0]
+root      147094  0.0  0.0      0     0 ?        I    11:29   0:00 [kworker/u17:3-events_unbound]
+root      148637  0.0  0.0      0     0 ?        I    11:32   0:00 [kworker/u19:3-events_unbound]
+root      153335  0.0  0.1   5636  3968 ?        Ss   11:44   0:00 dhclient enp0s3
+root      158962  0.0  0.0      0     0 ?        I    11:59   0:00 [kworker/u18:2-events_unbound]
+root      161578  0.0  0.0      0     0 ?        I    12:05   0:01 [kworker/1:1-mm_percpu_wq]
+root      161971  0.0  0.3  20400 12544 ?        Ss   12:06   0:00 sshd: choi [priv]
+root      161975  0.0  0.3  20400 12288 ?        Ss   12:06   0:00 sshd: choi [priv]
+choi      161977  0.0  0.1  20548  7024 ?        S    12:06   0:00 sshd: choi@pts/0
+choi      161979  0.0  0.1 224096  5376 pts/0    Ss+  12:06   0:00 -bash
+choi      162004  0.0  0.1  20400  7024 ?        S    12:06   0:00 sshd: choi@notty
+choi      162030  0.0  0.1  12628  7296 ?        Ss   12:06   0:00 /usr/libexec/openssh/sftp-server
+root      163207  0.0  0.0      0     0 ?        I    12:09   0:01 [kworker/3:1-mm_percpu_wq]
+root      167868  0.0  0.0      0     0 ?        I    12:23   0:00 [kworker/2:2-mm_percpu_wq]
+root      171992  0.0  0.0      0     0 ?        I    12:34   0:00 [kworker/0:1-cgroup_destroy]
+root      173804  0.0  0.0      0     0 ?        I    12:39   0:00 [kworker/u20:1-events_unbound]
+root      177205  0.0  0.0      0     0 ?        I    12:49   0:00 [kworker/1:2-cgroup_destroy]
+root      177206  0.0  0.3  20400 12416 ?        Ss   12:49   0:00 sshd: choi [priv]
+root      177210  0.0  0.3  20400 12288 ?        Ss   12:49   0:00 sshd: choi [priv]
+choi      177212  0.1  0.1  20548  7080 ?        S    12:49   0:01 sshd: choi@pts/1
+choi      177213  0.0  0.1 224096  5504 pts/1    Ss   12:49   0:00 -bash
+choi      177221  0.2  0.0 222652  3584 ?        Ss   12:49   0:02 bash -c while true; do sleep 1;head -v -n 8 /proc/mem
+choi      177241  0.0  0.1  20400  7024 ?        S    12:49   0:00 sshd: choi@notty
+choi      177270  0.0  0.1  12628  7168 ?        Ss   12:49   0:00 /usr/libexec/openssh/sftp-server
+root      177505  0.0  0.0      0     0 ?        I    12:49   0:00 [kworker/0:0-mm_percpu_wq]
+root      177651  0.0  0.2 235976  9152 pts/1    S    12:50   0:00 su -
+root      177670  0.0  0.1 224092  5632 pts/1    S    12:50   0:00 -bash
+root      177723  0.0  0.2 235636  8064 pts/1    S    12:50   0:00 su - choi
+choi      177724  0.0  0.1 224092  5632 pts/1    S    12:50   0:00 -bash
+root      179052  0.0  0.0      0     0 ?        I    12:54   0:00 [kworker/3:2-cgroup_destroy]
+root      179150  0.0  0.0      0     0 ?        I    12:54   0:00 [kworker/2:3-ata_sff]
+root      179922  0.0  0.0      0     0 ?        I    12:56   0:00 [kworker/u18:0-events_unbound]
+root      180481  0.0  0.0      0     0 ?        I    12:58   0:00 [kworker/u20:0-events_unbound]
+root      180941  0.0  0.0      0     0 ?        I    12:59   0:00 [kworker/2:0-ata_sff]
+root      182864  0.0  0.0      0     0 ?        I    13:04   0:00 [kworker/0:2]
+root      183290  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/u17:0-events_unbound]
+root      183291  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/u18:1-events_unbound]
+root      183292  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/1:0]
+root      183647  0.0  0.0      0     0 ?        I    13:06   0:00 [kworker/3:0-events_power_efficient]
+root      183738  0.0  0.2 239084  8960 ?        Ss   13:07   0:00 /usr/libexec/sssd/sssd_kcm --uid 0 --gid 0 --logger=f
+choi      183792  0.0  0.0 220952  1792 ?        S    13:07   0:00 sleep 1
+choi      183793  1.0  0.1 234644  6656 pts/1    R+   13:07   0:00 ps -aux
+[13:07:16][choi@vbox ~/mydir]$ top
+top - 13:07:20 up  5:03,  4 users,  load average: 0.09, 0.08, 0.04
+Tasks: 257 total,   1 running, 256 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  2.8 sy,  0.0 ni, 94.4 id,  0.0 wa,  1.4 hi,  1.4 si,  0.0 st
+MiB Mem :   3655.2 total,    636.8 free,   1896.7 used,   1395.2 buff/cache
+MiB Swap:   4040.0 total,   4035.7 free,      4.3 used.   1758.5 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+ 183815 choi      20   0  226064   4480   3584 R   5.9   0.1   0:00.02 top
+      1 root      20   0  175476  18512  11136 S   0.0   0.5   0:19.75 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.03 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-sync_
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns
+      9 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+     10 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/u16:0-events_unbound
+     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.07 kworker/u16:1-netns
+     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthre
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.19 ksoftirqd/0
+     17 root      20   0       0      0      0 I   0.0   0.0   0:02.11 rcu_preempt
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp_par_gp_
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp_gp_kthr
+     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.08 migration/0
+     21 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0
+     23 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     24 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     25 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1
+     26 root      rt   0       0      0      0 S   0.0   0.0   0:00.23 migration/1
+     27 root      20   0       0      0      0 S   0.0   0.0   0:00.51 ksoftirqd/1
+     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2
+     31 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/2
+     32 root      rt   0       0      0      0 S   0.0   0.0   0:00.24 migration/2
+     33 root      20   0       0      0      0 S   0.0   0.0   0:00.14 ksoftirqd/2
+     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H-events_highpri
+     36 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3
+     37 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/3
+     38 root      rt   0       0      0      0 S   0.0   0.0   0:00.21 migration/3
+     39 root      20   0       0      0      0 S   0.0   0.0   0:00.23 ksoftirqd/3
+     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H-events_highpri
+     48 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs
+     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_
+     50 root      20   0       0      0      0 S   0.0   0.0   0:00.02 kauditd
+     51 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd
+     52 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper
+     54 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write
+     56 root      20   0       0      0      0 S   0.0   0.0   0:00.38 kcompactd0
+     57 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+     58 root      39  19       0      0      0 S   0.0   0.0   0:00.91 khugepaged
+     59 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-crypt
+     60 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte
+     61 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc
+     62 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi
+     64 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d
+     65 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md
+     66 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi
+     67 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-
+     68 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd
+     71 root       0 -20       0      0      0 I   0.0   0.0   0:00.29 kworker/3:1H-kblockd
+     72 root      20   0       0      0      0 S   0.0   0.0   0:00.32 kswapd0
+     73 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kthro
+     77 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-acpi_
+     79 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kmpat
+     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kalua
+     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mld
+     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.05 kworker/0:1H-kblockd
+     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ipv6_
+     95 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kstrp
+    100 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u21:0
+    101 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u22:0
+    102 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u23:0
+    103 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u24:0
+    104 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/u25:0
+[13:07:22][choi@vbox ~/mydir]$ jobs
+[13:07:26][choi@vbox ~/mydir]$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.6Gi       1.8Gi       644Mi        19Mi       1.4Gi       1.7Gi
+Swap:          3.9Gi       4.0Mi       3.9Gi
+[13:08:45][choi@vbox ~/mydir]$ uname -a
+Linux vbox 5.14.0-570.17.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May 23 22:47:01 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+[13:08:51][choi@vbox ~/mydir]$ cat /proc/cpuinfo | more
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 151
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+stepping        : 2
+microcode       : 0x23
+cpu MHz         : 2111.998
+cache size      : 25600 KB
+physical id     : 0
+siblings        : 4
+core id         : 0
+cpu cores       : 4
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 22
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht s
+yscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 s
+se4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti fsgsbase bmi1 avx2 b
+mi2 invpcid rdseed adx clflushopt sha_ni arat md_clear flush_l1d arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit rfds bhi
+bogomips        : 4223.99
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 151
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+stepping        : 2
+microcode       : 0x23
+cpu MHz         : 2111.998
+cache size      : 25600 KB
+physical id     : 0
+siblings        : 4
+core id         : 1
+cpu cores       : 4
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 22
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht s
+yscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 s
+se4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti fsgsbase bmi1 avx2 b
+mi2 invpcid rdseed adx clflushopt sha_ni arat md_clear flush_l1d arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit rfds bhi
+bogomips        : 4223.99
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:
+
+processor       : 2
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 151
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+stepping        : 2
+microcode       : 0x23
+cpu MHz         : 2111.998
+cache size      : 25600 KB
+physical id     : 0
+siblings        : 4
+core id         : 2
+cpu cores       : 4
+apicid          : 2
+initial apicid  : 2
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 22
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht s
+yscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 s
+se4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti fsgsbase bmi1 avx2 b
+mi2 invpcid rdseed adx clflushopt sha_ni arat md_clear flush_l1d arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit rfds bhi
+bogomips        : 4223.99
+clflush size    : 64
+cache_alignment : 64
+[13:09:23][choi@vbox ~/mydir]$ cat /proc/cpuinfo | more | grep "model name"
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+model name      : 12th Gen Intel(R) Core(TM) i7-12700
+[13:09:31][choi@vbox ~/mydir]$ cat /proc/cpuinfo | more | grep "siblings"
+siblings        : 4
+siblings        : 4
+siblings        : 4
+siblings        : 4
+[13:09:40][choi@vbox ~/mydir]$ cat /proc/cpuinfo | more | grep "core i"
+core id         : 0
+core id         : 1
+core id         : 2
+core id         : 3
+[13:09:49][choi@vbox ~/mydir]$ cat /proc/cpuinfo | more | grep "cpu cores"
+cpu cores       : 4
+cpu cores       : 4
+cpu cores       : 4
+cpu cores       : 4
+[13:09:56][choi@vbox ~/mydir]$ cat /proc/meminfo
+MemTotal:        3742948 kB
+MemFree:          653008 kB
+MemAvailable:    1801892 kB
+Buffers:            3092 kB
+Cached:          1308956 kB
+SwapCached:          584 kB
+Active:          1237908 kB
+Inactive:        1429356 kB
+Active(anon):     930612 kB
+Inactive(anon):   444220 kB
+Active(file):     307296 kB
+Inactive(file):   985136 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       4136956 kB
+SwapFree:        4132812 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:       1351484 kB
+Mapped:           308460 kB
+Shmem:             19616 kB
+KReclaimable:     116920 kB
+Slab:             211856 kB
+SReclaimable:     116920 kB
+SUnreclaim:        94936 kB
+KernelStack:        8928 kB
+PageTables:        17156 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6008428 kB
+Committed_AS:    4771524 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       29508 kB
+VmallocChunk:          0 kB
+Percpu:             2336 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    995328 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      270272 kB
+DirectMap2M:     3923968 kB
+[13:10:05][choi@vbox ~/mydir]$ cat /proc/meminfo | grep "memtotal"
+[13:10:16][choi@vbox ~/mydir]$ cat /proc/meminfo | grep "MemTotal"
+MemTotal:        3742948 kB
+[13:10:23][choi@vbox ~/mydir]$ cat /proc/meminfo | grep "MemFree"
+MemFree:          655984 kB
+[13:10:29][choi@vbox ~/mydir]$ ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.4 175476 18512 ?        Ss   08:03   0:19 /usr/lib/systemd/systemd rhgb --system --deserialize
+root           2  0.0  0.0      0     0 ?        S    08:03   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    08:03   0:00 [pool_workqueue_]
+root           4  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-rcu_g]
+root           5  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-sync_]
+root           6  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-slub_]
+root           7  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-netns]
+root           9  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I    08:03   0:00 [kworker/u16:0-events_unbound]
+root          11  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-mm_pe]
+root          12  0.0  0.0      0     0 ?        I    08:03   0:00 [kworker/u16:1-netns]
+root          13  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_kthre]
+root          14  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_rude_]
+root          15  0.0  0.0      0     0 ?        I    08:03   0:00 [rcu_tasks_trace]
+root          16  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/0]
+root          17  0.0  0.0      0     0 ?        I    08:03   0:02 [rcu_preempt]
+root          18  0.0  0.0      0     0 ?        S    08:03   0:00 [rcu_exp_par_gp_]
+root          19  0.0  0.0      0     0 ?        S    08:03   0:00 [rcu_exp_gp_kthr]
+root          20  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/0]
+root          21  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/0]
+root          23  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/0]
+root          24  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/1]
+root          25  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/1]
+root          26  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/1]
+root          27  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/1]
+root          30  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/2]
+root          31  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/2]
+root          32  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/2]
+root          33  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/2]
+root          35  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/2:0H-events_highpri]
+root          36  0.0  0.0      0     0 ?        S    08:03   0:00 [cpuhp/3]
+root          37  0.0  0.0      0     0 ?        S    08:03   0:00 [idle_inject/3]
+root          38  0.0  0.0      0     0 ?        S    08:03   0:00 [migration/3]
+root          39  0.0  0.0      0     0 ?        S    08:03   0:00 [ksoftirqd/3]
+root          41  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/3:0H-events_highpri]
+root          48  0.0  0.0      0     0 ?        S    08:03   0:00 [kdevtmpfs]
+root          49  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-inet_]
+root          50  0.0  0.0      0     0 ?        S    08:03   0:00 [kauditd]
+root          51  0.0  0.0      0     0 ?        S    08:03   0:00 [khungtaskd]
+root          52  0.0  0.0      0     0 ?        S    08:03   0:00 [oom_reaper]
+root          54  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-write]
+root          56  0.0  0.0      0     0 ?        S    08:03   0:00 [kcompactd0]
+root          57  0.0  0.0      0     0 ?        SN   08:03   0:00 [ksmd]
+root          58  0.0  0.0      0     0 ?        SN   08:03   0:00 [khugepaged]
+root          59  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-crypt]
+root          60  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kinte]
+root          61  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kbloc]
+root          62  0.0  0.0      0     0 ?        S    08:03   0:00 [irq/9-acpi]
+root          64  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-tpm_d]
+root          65  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-md]
+root          66  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-md_bi]
+root          67  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-edac-]
+root          68  0.0  0.0      0     0 ?        S    08:03   0:00 [watchdogd]
+root          71  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/3:1H-kblockd]
+root          72  0.0  0.0      0     0 ?        S    08:03   0:00 [kswapd0]
+root          73  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kthro]
+root          77  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-acpi_]
+root          79  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kmpat]
+root          80  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kalua]
+root          82  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-mld]
+root          83  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/0:1H-kblockd]
+root          84  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ipv6_]
+root          95  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kstrp]
+root         100  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u21:0]
+root         101  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u22:0]
+root         102  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u23:0]
+root         103  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u24:0]
+root         104  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/u25:0]
+root         219  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/2:1H-kblockd]
+root         257  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/1:1H-kblockd]
+root         444  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ata_s]
+root         447  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_0]
+root         448  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_1]
+root         449  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         450  0.0  0.0      0     0 ?        S    08:03   0:00 [scsi_eh_2]
+root         451  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         452  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-scsi_]
+root         461  0.0  0.0      0     0 ?        S    08:03   0:00 [irq/18-vmwgfx]
+root         462  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-ttm]
+root         498  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/1:2H-kblockd]
+root         540  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kdmfl]
+root         547  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-kdmfl]
+root         565  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfsal]
+root         566  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs_m]
+root         567  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         568  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         569  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-r]
+root         570  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         571  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-i]
+root         572  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-l]
+root         573  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         574  0.0  0.0      0     0 ?        S    08:03   0:01 [xfsaild/dm-0]
+root         762  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         763  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         764  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-r]
+root         765  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-b]
+root         766  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-i]
+root         767  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-l]
+root         768  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-xfs-c]
+root         769  0.0  0.0      0     0 ?        S    08:03   0:00 [xfsaild/sda1]
+root         775  0.0  0.0  96340  2968 ?        S<sl 08:03   0:00 /sbin/auditd
+root         777  0.0  0.0   7948  3584 ?        S<   08:03   0:00 /usr/sbin/sedispatch
+dbus         803  0.0  0.1  12668  6340 ?        Ss   08:03   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+dbus         804  0.0  0.1  10700  6068 ?        S    08:03   0:01 dbus-broker --log 4 --controller 9 --machine-id 89a22
+avahi        805  0.0  0.1  16648  6656 ?        Ss   08:03   0:00 avahi-daemon: running [linux.local]
+root         808  0.0  0.1  82624  3840 ?        Ssl  08:03   0:00 /usr/sbin/irqbalance
+libstor+     809  0.0  0.0   2704  1536 ?        Ss   08:03   0:00 /usr/bin/lsmd -d
+root         810  0.0  0.0   3336  1920 ?        Ss   08:03   0:00 /usr/sbin/mcelog --daemon --foreground
+polkitd      811  0.0  0.7 2650228 26932 ?       Ssl  08:03   0:01 /usr/lib/polkit-1/polkitd --no-debug
+rtkit        812  0.0  0.0 153988  3328 ?        SNsl 08:03   0:00 /usr/libexec/rtkit-daemon
+root         813  0.0  0.3 534292 12388 ?        Ssl  08:03   0:00 /usr/libexec/accounts-daemon
+root         814  0.0  0.2 448296  8484 ?        Ssl  08:03   0:00 /usr/libexec/switcheroo-control
+root         817  0.0  0.3  31616 14804 ?        Ss   08:03   0:00 /usr/lib/systemd/systemd-logind
+root         818  0.0  0.3 395448 13392 ?        Ssl  08:03   0:00 /usr/libexec/udisks2/udisksd
+root         821  0.0  0.2 448880  8732 ?        Ssl  08:03   0:00 /usr/libexec/upowerd
+avahi        825  0.0  0.0  16648  2000 ?        S    08:03   0:00 avahi-daemon: chroot helper
+root         835  0.0  0.0   4732  2816 ?        SNs  08:03   0:00 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/et
+chrony       845  0.0  0.1  84944  4292 ?        S    08:03   0:00 /usr/sbin/chronyd -F 2
+root         852  0.0  0.3 391332 12256 ?        Ssl  08:03   0:00 /usr/sbin/ModemManager
+root         854  0.0  1.3 584644 50504 ?        Ssl  08:03   0:01 /usr/bin/python3 -s /usr/sbin/firewalld --nofork --no
+root         919  0.0  0.6 477224 23644 ?        Ssl  08:03   0:01 /usr/sbin/NetworkManager --no-daemon
+root         939  0.0  0.2 248824 11136 ?        Ss   08:03   0:00 /usr/sbin/cupsd -l
+root         942  0.0  0.2  18756  9856 ?        Ss   08:03   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startu
+root         951  0.0  0.1  12472  4864 ?        Ss   08:03   0:00 /usr/sbin/atd -f
+root         956  0.0  0.3 461424 13256 ?        Ssl  08:03   0:00 /usr/sbin/gdm
+root        1053  0.0  0.2 165140 10112 ?        Ssl  08:03   0:02 /usr/sbin/rsyslogd -n
+root        1609  0.0  0.1  16648  6400 ?        Ss   08:03   0:00 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_s
+colord      1775  0.0  0.4 530428 16048 ?        Ssl  08:03   0:00 /usr/libexec/colord
+root        1941  0.0  0.4 536556 15020 ?        Sl   08:04   0:00 gdm-session-worker [pam/gdm-password]
+choi        1964  0.0  0.3  24512 14484 ?        Ss   08:04   0:00 /usr/lib/systemd/systemd --user
+choi        1966  0.0  0.2  27900  7692 ?        S    08:04   0:00 (sd-pam)
+choi        1981  0.0  0.1 452992  6840 ?        Sl   08:04   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+choi        1985  0.0  0.2 374328  8032 tty2     Ssl+ 08:04   0:00 /usr/libexec/gdm-wayland-session --register-session g
+choi        1989  0.0  0.1  10672  4352 ?        Ss   08:04   0:00 /usr/bin/dbus-broker-launch --scope user
+choi        1992  0.0  0.1   6744  4352 ?        S    08:04   0:00 dbus-broker --log 4 --controller 9 --machine-id 89a22
+choi        1994  0.0  0.5 513336 19356 tty2     Sl+  08:04   0:00 /usr/libexec/gnome-session-binary
+choi        2029  0.0  0.2 303664  7488 ?        Ssl  08:04   0:00 /usr/libexec/gnome-session-ctl --monitor
+choi        2031  0.0  0.6 939868 22940 ?        Ssl  08:04   0:00 /usr/libexec/gnome-session-binary --systemd-service -
+choi        2047  0.0 10.8 5212892 404672 ?      Ssl  08:04   0:18 /usr/bin/gnome-shell
+choi        2064  0.0  0.2 452788  9912 ?        Ssl  08:04   0:00 /usr/libexec/gvfsd
+choi        2069  0.0  0.2 379912 10440 ?        Sl   08:04   0:01 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+choi        2077  0.0  0.2 308444  9404 ?        Ssl  08:04   0:00 /usr/libexec/at-spi-bus-launcher
+choi        2082  0.0  0.1  10428  4224 ?        S    08:04   0:00 /usr/bin/dbus-broker-launch --config-file=/usr/share/
+choi        2083  0.0  0.0   5004  2560 ?        S    08:04   0:00 dbus-broker --log 4 --controller 9 --machine-id 89a22
+choi        2091  0.0  0.4 526928 15432 ?        Sl   08:04   0:00 ibus-daemon --panel disable
+choi        2095  0.0  0.3 449396 11324 ?        Sl   08:04   0:00 /usr/libexec/ibus-dconf
+choi        2096  0.0  0.8 596296 33392 ?        Sl   08:04   0:00 /usr/libexec/ibus-extension-gtk3
+choi        2097  0.0  0.2 449320  9320 ?        Ssl  08:04   0:00 /usr/libexec/ibus-portal
+choi        2103  0.0  0.5 586452 21976 ?        Ssl  08:04   0:00 /usr/libexec/gnome-shell-calendar-server
+choi        2104  0.0  0.2 448408  8268 ?        Ssl  08:04   0:00 /usr/libexec/xdg-permission-store
+choi        2119  0.0  0.8 1287880 29948 ?       Ssl  08:04   0:00 /usr/libexec/evolution-source-registry
+choi        2120  0.0  0.3 326552 14272 ?        S<sl 08:04   0:00 /usr/bin/pipewire
+choi        2121  0.0  0.5 547244 21416 ?        S<sl 08:04   0:00 /usr/bin/wireplumber
+choi        2122  0.0  0.2 316704  9344 ?        S<sl 08:04   0:00 /usr/bin/pipewire-pulse
+choi        2142  0.0  0.6 820640 25272 ?        Ssl  08:04   0:00 /usr/libexec/goa-daemon
+choi        2157  0.0  0.3 532788 14216 ?        Ssl  08:04   0:01 /usr/libexec/goa-identity-service
+choi        2160  0.0  0.9 1592412 34064 ?       Ssl  08:04   0:00 /usr/libexec/evolution-calendar-factory
+choi        2170  0.0  0.3 527820 12124 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+choi        2179  0.0  0.2 448424 10432 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+choi        2190  0.0  0.2 450248  9132 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+choi        2194  0.0  0.1 155856  5504 ?        Ssl  08:04   0:00 /usr/libexec/dconf-service
+choi        2204  0.0  0.8 890008 30496 ?        Ssl  08:04   0:00 /usr/libexec/evolution-addressbook-factory
+choi        2205  0.0  0.2 448500 10592 ?        Ssl  08:04   0:00 /usr/libexec/gvfs-goa-volume-monitor
+choi        2225  0.0  0.7 2800956 26904 ?       Ssl  08:04   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.N
+choi        2227  0.0  0.1 161588  7168 ?        Ssl  08:04   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+choi        2229  0.0  0.2 522508  8920 ?        Ssl  08:04   0:00 /usr/libexec/gsd-a11y-settings
+choi        2235  0.0  0.8 666692 31168 ?        Ssl  08:04   0:00 /usr/libexec/gsd-color
+choi        2238  0.0  0.5 595528 21084 ?        Ssl  08:04   0:00 /usr/libexec/gsd-datetime
+choi        2241  0.0  0.3 524880 12160 ?        Ssl  08:04   0:00 /usr/libexec/gsd-housekeeping
+choi        2245  0.0  4.8 1715084 180972 ?      Sl   08:04   0:05 /usr/bin/gnome-software --gapplication-service
+choi        2248  0.0  0.1 232032  7296 ?        Sl   08:04   0:00 /usr/libexec/gsd-disk-utility-notify
+choi        2263  0.0  0.7 590792 29756 ?        Ssl  08:04   0:00 /usr/libexec/gsd-keyboard
+choi        2265  0.0  1.4 890832 53788 ?        Sl   08:04   0:00 /usr/libexec/evolution-data-server/evolution-alarm-no
+choi        2269  0.0  0.8 809548 32952 ?        Ssl  08:04   0:00 /usr/libexec/gsd-media-keys
+choi        2270  0.0  0.7 592288 29504 ?        Ssl  08:04   0:00 /usr/libexec/gsd-power
+choi        2271  0.0  0.4 468316 15420 ?        Ssl  08:04   0:00 /usr/libexec/gsd-print-notifications
+choi        2272  0.0  0.2 669868 10784 ?        Ssl  08:04   0:00 /usr/libexec/gsd-rfkill
+choi        2275  0.0  0.2 448268 10380 ?        Ssl  08:04   0:00 /usr/libexec/gsd-screensaver-proxy
+choi        2290  0.0  0.3 678636 13004 ?        Ssl  08:04   0:00 /usr/libexec/gsd-sharing
+choi        2307  0.0  0.3 603788 14144 ?        Ssl  08:04   0:01 /usr/libexec/gsd-smartcard
+choi        2311  0.0  0.3 530996 12484 ?        Ssl  08:04   0:00 /usr/libexec/gsd-sound
+choi        2312  0.0  0.2 598124  9460 ?        Ssl  08:04   0:00 /usr/libexec/gsd-usb-protection
+choi        2322  0.0  0.8 665168 30148 ?        Ssl  08:04   0:00 /usr/libexec/gsd-wacom
+choi        2358  0.0  0.8 2800956 30660 ?       Ssl  08:04   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenS
+choi        2372  0.0  0.2 375560  9300 ?        Sl   08:04   0:00 /usr/libexec/ibus-engine-simple
+choi        2407  0.0  0.5 844000 22044 ?        Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal
+choi        2413  0.0  0.2 744120  8976 ?        Ssl  08:04   0:00 /usr/libexec/xdg-document-portal
+root        2423  0.0  0.0   2652  1664 ?        Ss   08:04   0:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmo
+choi        2429  0.0  1.6 1050400 61044 ?       Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal-gnome
+choi        2451  0.0  0.5 599568 22196 ?        Sl   08:04   0:00 /usr/libexec/gsd-printer
+choi        2560  0.0  0.8 591912 31948 ?        Ssl  08:04   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root        2576  0.0  0.7 565984 29072 ?        Ssl  08:04   0:01 /usr/libexec/fwupd/fwupd
+choi        2697  0.0  4.9 2039244 184656 ?      Sl   08:04   0:02 gnome-control-center network
+choi        2765  0.0  0.2 527000 10968 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-trash --spawner :1.17 /org/gtk/gvf
+choi        2781  0.0  0.3 748540 13488 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-network --spawner :1.17 /org/gtk/g
+choi        2793  0.0  0.2 529104 11228 ?        Sl   08:04   0:00 /usr/libexec/gvfsd-dnssd --spawner :1.17 /org/gtk/gvf
+choi        2813  0.0  0.2 374936  8064 ?        Ssl  08:05   0:00 /usr/libexec/gvfsd-metadata
+root        4524  0.0  0.0      0     0 ?        I<   08:09   0:00 [kworker/R-tls-s]
+root       16910  0.0  0.0 223940  3584 ?        Ss   08:41   0:00 /usr/sbin/crond -n
+root       58035  0.0  0.3  27624 12800 ?        Ss   08:43   0:00 /usr/lib/systemd/systemd-journald
+root       58049  0.0  0.3  38688 13444 ?        Ss   08:43   0:00 /usr/lib/systemd/systemd-udevd
+root       58104  0.0  0.7 483768 29612 ?        Ssl  08:43   0:04 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+root       58557  0.0  0.7 482224 29628 ?        Ssl  08:43   0:02 /usr/bin/python3 -Es /usr/sbin/tuned-ppd -l
+mysql      90412  0.4 11.4 2398300 429196 ?      Ssl  08:46   1:10 /usr/sbin/mysqld
+root      101371  0.0  0.0  15208  1868 ?        Ss   09:21   0:00 nginx: master process /usr/sbin/nginx
+nginx     101372  0.0  0.1  15636  3916 ?        S    09:21   0:00 nginx: worker process
+nginx     101373  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+nginx     101374  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+nginx     101375  0.0  0.0  15636  3276 ?        S    09:21   0:00 nginx: worker process
+root      105025  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib-co]
+root      105026  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib-co]
+root      105027  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib_mc]
+root      105028  0.0  0.0      0     0 ?        I<   09:31   0:00 [kworker/R-ib_nl]
+root      109623  0.0  0.0      0     0 ?        I    09:44   0:00 [kworker/u19:2-events_unbound]
+root      140017  0.0  0.0      0     0 ?        I    11:09   0:00 [kworker/u17:2-events_unbound]
+root      141743  0.0  0.0      0     0 ?        I    11:14   0:00 [kworker/u19:0-flush-253:0]
+root      147094  0.0  0.0      0     0 ?        I    11:29   0:00 [kworker/u17:3-events_unbound]
+root      148637  0.0  0.0      0     0 ?        R    11:32   0:00 [kworker/u19:3-events_unbound]
+root      153335  0.0  0.1   5636  3968 ?        Ss   11:44   0:00 dhclient enp0s3
+root      158962  0.0  0.0      0     0 ?        I    11:59   0:00 [kworker/u18:2-events_unbound]
+root      161578  0.0  0.0      0     0 ?        I    12:05   0:01 [kworker/1:1-events]
+root      161971  0.0  0.3  20400 12544 ?        Ss   12:06   0:00 sshd: choi [priv]
+root      161975  0.0  0.3  20400 12288 ?        Ss   12:06   0:00 sshd: choi [priv]
+choi      161977  0.0  0.1  20548  7024 ?        S    12:06   0:00 sshd: choi@pts/0
+choi      161979  0.0  0.1 224096  5376 pts/0    Ss+  12:06   0:00 -bash
+choi      162004  0.0  0.1  20400  7024 ?        S    12:06   0:00 sshd: choi@notty
+choi      162030  0.0  0.1  12628  7296 ?        Ss   12:06   0:00 /usr/libexec/openssh/sftp-server
+root      163207  0.0  0.0      0     0 ?        I    12:09   0:01 [kworker/3:1-events]
+root      167868  0.0  0.0      0     0 ?        I    12:23   0:00 [kworker/2:2-mm_percpu_wq]
+root      173804  0.0  0.0      0     0 ?        I    12:39   0:00 [kworker/u20:1-events_unbound]
+root      177205  0.0  0.0      0     0 ?        I    12:49   0:00 [kworker/1:2-cgroup_destroy]
+root      177206  0.0  0.3  20400 12416 ?        Ss   12:49   0:00 sshd: choi [priv]
+root      177210  0.0  0.3  20400 12288 ?        Ss   12:49   0:00 sshd: choi [priv]
+choi      177212  0.1  0.1  20548  7080 ?        R    12:49   0:01 sshd: choi@pts/1
+choi      177213  0.0  0.1 224096  5504 pts/1    Ss   12:49   0:00 -bash
+choi      177221  0.2  0.0 222652  3584 ?        Ss   12:49   0:03 bash -c while true; do sleep 1;head -v -n 8 /proc/mem
+choi      177241  0.0  0.1  20400  7024 ?        S    12:49   0:00 sshd: choi@notty
+choi      177270  0.0  0.1  12628  7168 ?        Ss   12:49   0:00 /usr/libexec/openssh/sftp-server
+root      177505  0.0  0.0      0     0 ?        I    12:49   0:00 [kworker/0:0-events]
+root      177651  0.0  0.2 235976  9152 pts/1    S    12:50   0:00 su -
+root      177670  0.0  0.1 224092  5632 pts/1    S    12:50   0:00 -bash
+root      177723  0.0  0.2 235636  8064 pts/1    S    12:50   0:00 su - choi
+choi      177724  0.0  0.1 224092  5632 pts/1    S    12:50   0:00 -bash
+root      179052  0.0  0.0      0     0 ?        I    12:54   0:00 [kworker/3:2-cgroup_destroy]
+root      179922  0.0  0.0      0     0 ?        I    12:56   0:00 [kworker/u18:0-events_unbound]
+root      180481  0.0  0.0      0     0 ?        I    12:58   0:00 [kworker/u20:0-events_unbound]
+root      180941  0.0  0.0      0     0 ?        I    12:59   0:00 [kworker/2:0-ata_sff]
+root      182864  0.0  0.0      0     0 ?        I    13:04   0:00 [kworker/0:2-cgroup_destroy]
+root      183290  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/u17:0-events_unbound]
+root      183291  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/u18:1-events_unbound]
+root      183292  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/1:0]
+root      183647  0.0  0.0      0     0 ?        I    13:06   0:00 [kworker/3:0-mm_percpu_wq]
+root      183738  0.0  0.2 239084  8960 ?        Ss   13:07   0:00 /usr/libexec/sssd/sssd_kcm --uid 0 --gid 0 --logger=f
+root      184782  0.0  0.0      0     0 ?        I    13:09   0:00 [kworker/2:1-ata_sff]
+choi      185001  0.0  0.0 220952  1792 ?        S    13:10   0:00 sleep 1
+choi      185002  0.0  0.1 234644  6656 pts/1    R+   13:10   0:00 ps -aux
+[13:10:35][choi@vbox ~/mydir]$ ps -aux | head -5
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.4 175476 18512 ?        Ss   08:03   0:19 /usr/lib/systemd/systemd rhgb --system --deserialize 23
+root           2  0.0  0.0      0     0 ?        S    08:03   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    08:03   0:00 [pool_workqueue_]
+root           4  0.0  0.0      0     0 ?        I<   08:03   0:00 [kworker/R-rcu_g]
+[13:10:59][choi@vbox ~/mydir]$ htop
+bash: htop: 명령을 찾을 수 없습니다...
+유사한 명령: 'top'
+[13:11:03][choi@vbox ~/mydir]$ sudo dnf install htop
+[sudo] choi의 암호:
+Rocky Linux 9 - BaseOS                                                                  4.8 kB/s | 4.1 kB     00:00
+Rocky Linux 9 - AppStream                                                               7.5 kB/s | 4.5 kB     00:00
+Rocky Linux 9 - Extras                                                                  4.9 kB/s | 2.9 kB     00:00
+종속성이 해결되었습니다.
+========================================================================================================================
+ 꾸러미                        구조                      버전                           저장소                     크기
+========================================================================================================================
+설치 중:
+ htop                          x86_64                    3.3.0-1.el9                    epel                      198 k
+종속 꾸러미 설치 중:
+ hwloc-libs                    x86_64                    2.4.1-5.el9                    baseos                    2.1 M
+
+연결 요약
+========================================================================================================================
+설치  2 꾸러미
+
+전체 내려받기 크기: 2.3 M
+설치된 크기 : 3.5 M
+진행할까요? [y/N]: y
+꾸러미 내려받기 중:
+(1/2): htop-3.3.0-1.el9.x86_64.rpm                                                      3.2 MB/s | 198 kB     00:00
+(2/2): hwloc-libs-2.4.1-5.el9.x86_64.rpm                                                 10 MB/s | 2.1 MB     00:00
+------------------------------------------------------------------------------------------------------------------------
+합계                                                                                    2.2 MB/s | 2.3 MB     00:01
+Extra Packages for Enterprise Linux 9 - x86_64                                          1.6 MB/s | 1.6 kB     00:00
+GPG키 0x3228467C 가져오는 중:
+사용자 ID : "Fedora (epel9) <epel@fedoraproject.org>"
+지문: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+출처 : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+진행할까요? [y/N]: y
+키 가져오기에 성공했습니다
+연결 확인 실행 중
+연결 확인에 성공했습니다.
+연결 시험 실행 중
+연결 시험에 성공했습니다.
+연결 실행 중
+  준비 중     :                                                                                                     1/1
+  설치 중     : hwloc-libs-2.4.1-5.el9.x86_64                                                                       1/2
+  설치 중     : htop-3.3.0-1.el9.x86_64                                                                             2/2
+  구현 중     : htop-3.3.0-1.el9.x86_64                                                                             2/2
+  확인 중     : htop-3.3.0-1.el9.x86_64                                                                             1/2
+  확인 중     : hwloc-libs-2.4.1-5.el9.x86_64                                                                       2/2
+
+설치되었습니다:
+  htop-3.3.0-1.el9.x86_64                                 hwloc-libs-2.4.1-5.el9.x86_64
+
+완료되었습니다!
+[13:11:32][choi@vbox ~/mydir]$ htop
+[13:11:43][choi@vbox ~/mydir]$ df -h
+Filesystem                Size  Used Avail Use% Mounted on
+devtmpfs                  4.0M     0  4.0M   0% /dev
+tmpfs                     1.8G     0  1.8G   0% /dev/shm
+tmpfs                     732M  9.3M  722M   2% /run
+/dev/mapper/rl_vbox-root   45G  6.9G   39G  16% /
+/dev/sda1                 960M  445M  516M  47% /boot
+tmpfs                     366M  104K  366M   1% /run/user/1000
+[13:11:51][choi@vbox ~/mydir]$ df -h | grep "Filesystem"
+Filesystem                Size  Used Avail Use% Mounted on
+[13:12:11][choi@vbox ~/mydir]$ df -h '{print $1, $6}'
+df: '{print $1, $6}': 그런 파일이나 디렉터리가 없습니다
+[13:14:12][choi@vbox ~/mydir]$ df -h | awk '{print $1, $6}'
+Filesystem Mounted
+devtmpfs /dev
+tmpfs /dev/shm
+tmpfs /run
+/dev/mapper/rl_vbox-root /
+/dev/sda1 /boot
+tmpfs /run/user/1000
+[13:14:24][choi@vbox ~/mydir]$ mount
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=4096k,nr_inodes=459488,mode=755,inode64)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,size=748592k,nr_inodes=819200,mode=755,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,seclabel,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime,seclabel)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+/dev/mapper/rl_vbox-root on / type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,nosuid,noexec,relatime)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=673)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime,seclabel)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime,seclabel)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+none on /run/credentials/systemd-sysctl.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)
+none on /run/credentials/systemd-tmpfiles-setup-dev.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)
+/dev/sda1 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+none on /run/credentials/systemd-tmpfiles-setup.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=374292k,nr_inodes=93573,mode=700,uid=1000,gid=1000,inode64)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+portal on /run/user/1000/doc type fuse.portal (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+[13:30:05][choi@vbox ~/mydir]$ mount -l |grep sda
+/dev/sda1 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+[13:30:32][choi@vbox ~/mydir]$ cd /etc | grep yum
+[13:30:57][choi@vbox ~/mydir]$ cd /etc | grep "yum"
+[13:31:02][choi@vbox ~/mydir]$ ls /etc | grep yum
+yum
+yum.conf
+yum.repos.d
+[13:31:17][choi@vbox ~/mydir]$ yum list |head -5
+Extra Packages for Enterprise Linux 9 - x86_64   28 MB/s |  20 MB     00:00
+Extra Packages for Enterprise Linux 9 openh264  2.5 kB/s | 2.5 kB     00:00
+MySQL 8.0 Community Server                      1.4 MB/s | 2.5 MB     00:01
+MySQL Connectors Community                      105 kB/s |  80 kB     00:00
+MySQL Tools Community                           774 kB/s | 1.0 MB     00:01
+[13:31:46][choi@vbox ~/mydir]$ yum list updated | head -5
+Rocky Linux 9 - BaseOS                          3.3 MB/s | 2.5 MB     00:00
+Rocky Linux 9 - AppStream                        10 MB/s | 9.6 MB     00:00
+Rocky Linux 9 - Extras                           30 kB/s |  17 kB     00:00
+오류: 목록과 일치하는 꾸러미가 없습니다
+[13:32:10][choi@vbox ~/mydir]$ systemctl list-units --type=service --state=running
+  UNIT                       LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service    loaded active running Accounts Service
+  alsa-state.service         loaded active running Manage Sound Card State (restore and store)
+  atd.service                loaded active running Deferred execution scheduler
+  auditd.service             loaded active running Security Auditing Service
+  avahi-daemon.service       loaded active running Avahi mDNS/DNS-SD Stack
+  chronyd.service            loaded active running NTP client/server
+  colord.service             loaded active running Manage, Install and Generate Color Profiles
+  crond.service              loaded active running Command Scheduler
+  cups.service               loaded active running CUPS Scheduler
+  dbus-broker.service        loaded active running D-Bus System Message Bus
+  firewalld.service          loaded active running firewalld - dynamic firewall daemon
+  fwupd.service              loaded active running Firmware update daemon
+  gdm.service                loaded active running GNOME Display Manager
+  irqbalance.service         loaded active running irqbalance daemon
+  libstoragemgmt.service     loaded active running libstoragemgmt plug-in server daemon
+  mcelog.service             loaded active running Machine Check Exception Logging Daemon
+  ModemManager.service       loaded active running Modem Manager
+  mysqld.service             loaded active running MySQL Server
+  NetworkManager.service     loaded active running Network Manager
+  nginx.service              loaded active running The nginx HTTP and reverse proxy server
+  polkit.service             loaded active running Authorization Manager
+  rsyslog.service            loaded active running System Logging Service
+  rtkit-daemon.service       loaded active running RealtimeKit Scheduling Policy Service
+  sshd.service               loaded active running OpenSSH server daemon
+  sssd-kcm.service           loaded active running SSSD Kerberos Cache Manager
+  switcheroo-control.service loaded active running Switcheroo Control Proxy service
+  systemd-journald.service   loaded active running Journal Service
+  systemd-logind.service     loaded active running User Login Management
+  systemd-udevd.service      loaded active running Rule-based Manager for Device Events and Files
+  tuned-ppd.service          loaded active running PPD-to-TuneD API Translation Daemon
+  tuned.service              loaded active running Dynamic System Tuning Daemon
+  udisks2.service            loaded active running Disk Manager
+  upower.service             loaded active running Daemon for power management
+  user@1000.service          loaded active running User Manager for UID 1000
+  wpa_supplicant.service     loaded active running WPA supplicant
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+35 loaded units listed.
+[13:32:40][choi@vbox ~/mydir]$ systemctl status tuned.service
+● tuned.service - Dynamic System Tuning Daemon
+     Loaded: loaded (/usr/lib/systemd/system/tuned.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-06-30 23:05:20 KST; 14h ago
+       Docs: man:tuned(8)
+             man:tuned.conf(5)
+             man:tuned-adm(8)
+   Main PID: 58104 (tuned)
+      Tasks: 4 (limit: 22974)
+     Memory: 14.4M
+        CPU: 5.109s
+     CGroup: /system.slice/tuned.service
+             └─58104 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+
+ 6월 30 23:05:20 vbox systemd[1]: Starting Dynamic System Tuning Daemon...
+ 6월 30 23:05:20 vbox systemd[1]: Started Dynamic System Tuning Daemon.
+[13:32:55][choi@vbox ~/mydir]$ cd /etc
+[13:33:12][choi@vbox /etc]$ ls *nginx*
+conf.d        fastcgi.conf.default    koi-utf     mime.types.default  scgi_params          uwsgi_params.default
+default.d     fastcgi_params          koi-win     nginx.conf          scgi_params.default  win-utf
+fastcgi.conf  fastcgi_params.default  mime.types  nginx.conf.default  uwsgi_params
+[13:33:18][choi@vbox /etc]$ ls | grep nginx
+nginx
+[13:34:01][choi@vbox /etc]$ find . -type f | grep nginx
+find: ‘./lvm/devices’: 허가 거부
+find: ‘./lvm/archive’: 허가 거부
+find: ‘./lvm/backup’: 허가 거부
+find: ‘./lvm/cache’: 허가 거부
+find: ‘./grub.d’: 허가 거부
+./logrotate.d/nginx
+find: ‘./pki/rsyslog’: 허가 거부
+find: ‘./nftables’: 허가 거부
+find: ‘./ssh/sshd_config.d’: 허가 거부
+find: ‘./sssd’: 허가 거부
+find: ‘./cups/ssl’: 허가 거부
+find: ‘./sos/cleaner’: 허가 거부
+find: ‘./sudoers.d’: 허가 거부
+find: ‘./polkit-1/rules.d’: 허가 거부
+find: ‘./polkit-1/localauthority’: 허가 거부
+find: ‘./audit’: 허가 거부
+find: ‘./firewalld’: 허가 거부
+find: ‘./dhcp’: 허가 거부
+./nginx/fastcgi.conf
+./nginx/fastcgi.conf.default
+./nginx/fastcgi_params
+./nginx/fastcgi_params.default
+./nginx/koi-utf
+./nginx/koi-win
+./nginx/mime.types
+./nginx/mime.types.default
+./nginx/nginx.conf
+./nginx/nginx.conf.default
+./nginx/scgi_params
+./nginx/scgi_params.default
+./nginx/uwsgi_params
+./nginx/uwsgi_params.default
+./nginx/win-utf
+[13:34:26][choi@vbox /etc]$ sudo find . -type f | grep nginx
+[sudo] choi의 암호:
+./logrotate.d/nginx
+./nginx/fastcgi.conf
+./nginx/fastcgi.conf.default
+./nginx/fastcgi_params
+./nginx/fastcgi_params.default
+./nginx/koi-utf
+./nginx/koi-win
+./nginx/mime.types
+./nginx/mime.types.default
+./nginx/nginx.conf
+./nginx/nginx.conf.default
+./nginx/scgi_params
+./nginx/scgi_params.default
+./nginx/uwsgi_params
+./nginx/uwsgi_params.default
+./nginx/win-utf
+[13:34:38][choi@vbox /etc]$ systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2025-06-30 23:43:28 KST; 13h ago
+   Main PID: 101371 (nginx)
+      Tasks: 5 (limit: 22974)
+     Memory: 4.3M
+        CPU: 34ms
+     CGroup: /system.slice/nginx.service
+             ├─101371 "nginx: master process /usr/sbin/nginx"
+             ├─101372 "nginx: worker process"
+             ├─101373 "nginx: worker process"
+             ├─101374 "nginx: worker process"
+             └─101375 "nginx: worker process"
+
+ 6월 30 23:43:28 vbox systemd[1]: Starting The nginx HTTP and reverse proxy server...
+ 6월 30 23:43:28 vbox nginx[101369]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+ 6월 30 23:43:28 vbox nginx[101369]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+ 6월 30 23:43:28 vbox systemd[1]: Started The nginx HTTP and reverse proxy server.
+[13:35:01][choi@vbox /etc]$ firewall-cmd --list-all
+Authorization failed.
+    Make sure polkit agent is running or run the application as superuser.
+[13:35:15][choi@vbox /etc]$ sudo firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s8
+  sources:
+  services: cockpit dhcpv6-client http https ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+[13:35:19][choi@vbox /etc]$ systemctl enable nginx
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-unit-files ====
+Authentication is required to manage system service or unit files.
+Authenticating as: choi
+Password:
+==== AUTHENTICATION COMPLETE ====
+==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ====
+Authentication is required to reload the systemd state.
+Authenticating as: choi
+Password:
+==== AUTHENTICATION COMPLETE ====
+[13:35:51][choi@vbox /etc]$ exit
+로그아웃
+[root@vbox ~]# exit
+로그아웃
+[choi@vbox tmp]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 03:11:57 2025
+-bash: /home/choi/.bashrc: 줄 26: '''를 찾는 도중 예상하지 못한 파일의 끝
+-bash: /home/choi/.bashrc: 줄 28: 문법 오류: 예기치 않은 파일의 끝
+[choi@vbox ~]$ su -
+암호:
+[root@vbox ~]# nano /home/choi/.bashrc
+[root@vbox ~]# exit
+로그아웃
+[choi@vbox ~]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 13:36:38 2025 from 192.168.56.1
+[choi@vbox ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:998:User for polkitd:/:/sbin/nologin
+sssd:x:997:997:User for sssd:/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin
+geoclue:x:996:996:User for geoclue:/var/lib/geoclue:/sbin/nologin
+colord:x:995:995:User for colord:/var/lib/colord:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/:/sbin/nologin
+pipewire:x:994:993:PipeWire System Daemon:/run/pipewire:/usr/sbin/nologin
+clevis:x:993:992:Clevis Decryption Framework unprivileged user:/var/cache/clevis:/usr/sbin/nologin
+flatpak:x:992:991:Flatpak system helper:/:/usr/sbin/nologin
+libstoragemgmt:x:990:990:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+setroubleshoot:x:989:989:SELinux troubleshoot server:/var/lib/setroubleshoot:/usr/sbin/nologin
+gdm:x:42:42:GNOME Display Manager:/var/lib/gdm:/usr/sbin/nologin
+gnome-initial-setup:x:988:987::/run/gnome-initial-setup/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/usr/sbin/nologin
+chrony:x:987:986:chrony system user:/var/lib/chrony:/sbin/nologin
+dnsmasq:x:986:985:Dnsmasq DHCP and DNS server:/var/lib/dnsmasq:/usr/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+choi:x:1000:1000:choi:/home/choi:/bin/bash
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/false
+nginx:x:985:984:Nginx web server:/var/lib/nginx:/sbin/nologin
+[choi@vbox ~]$ cat /etc/shadow
+cat: /etc/shadow: 허가 거부
+[choi@vbox ~]$ sudo cat /etc/shadow
+[sudo] choi의 암호:
+root:$6$FjR.N.6q.zuNFhW3$wqEmPj5VeHd/P5.ng9/BAWc5/bREZOuQle.pnUaMTCfoTgA2T23.PTb5cDfkL/RyMNNIt5S4Kf9s5V4hweWFA1::0:99999:7:::
+bin:*:19820:0:99999:7:::
+daemon:*:19820:0:99999:7:::
+adm:*:19820:0:99999:7:::
+lp:*:19820:0:99999:7:::
+sync:*:19820:0:99999:7:::
+shutdown:*:19820:0:99999:7:::
+halt:*:19820:0:99999:7:::
+mail:*:19820:0:99999:7:::
+operator:*:19820:0:99999:7:::
+games:*:19820:0:99999:7:::
+ftp:*:19820:0:99999:7:::
+nobody:*:19820:0:99999:7:::
+tss:!!:20269::::::
+systemd-coredump:!!:20269::::::
+dbus:!!:20269::::::
+polkitd:!!:20269::::::
+sssd:!!:20269::::::
+avahi:!!:20269::::::
+geoclue:!!:20269::::::
+colord:!!:20269::::::
+rtkit:!!:20269::::::
+pipewire:!!:20269::::::
+clevis:!!:20269::::::
+flatpak:!!:20269::::::
+libstoragemgmt:!*:20269::::::
+setroubleshoot:!!:20269::::::
+gdm:!!:20269::::::
+gnome-initial-setup:!!:20269::::::
+sshd:!!:20269::::::
+chrony:!!:20269::::::
+dnsmasq:!!:20269::::::
+tcpdump:!!:20269::::::
+choi:$6$58o.l./JGouPJM0d$Fp2x4BRkj2OxnnnV7auM7gt1zzlshvhqXY7USa6JhR9dbd.UaReperZPEois81p4jvjNPyYm0DPW.KdMCVFZl/::0:99999:7:::
+mysql:!!:20269::::::
+nginx:!!:20269::::::
+[choi@vbox ~]$ man openss
+No manual entry for openss
+[choi@vbox ~]$ sudo adduser user1
+[choi@vbox ~]$ sudo passwd user1
+user1 사용자의 비밀 번호 변경 중
+새 암호:
+잘못된 암호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력:
+죄송합니다. 암호가 일치하지 않습니다.
+qpasswd: 인증 토근 수정 오류
+[choi@vbox ~]$ sudo passwd user1
+user1 사용자의 비밀 번호 변경 중
+새 암호:
+잘못된 암호: 암호 사전 검사에 실패했습니다 - 너무 단순/체계적입니다
+새 암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[choi@vbox ~]$ su user1
+암호:
+[user1@vbox choi]$ la /home
+bash: la: 명령을 찾을 수 없습니다...
+[user1@vbox choi]$ ls -l /home
+합계 4
+drwx------. 15 choi  choi  4096  7월  1 13:38 choi
+drwx------.  3 user1 user1   98  7월  1 13:38 user1
+[user1@vbox choi]$ sudo cat /etc/passwd
+
+로컬 시스템 관리자에게 일반적인 지침을 받았으리라 믿습니다.
+보통 세가지로 요약합니다:
+
+    #1) 타인의 사생활을 존중하십시오.
+    #2) 입력하기 전에 한 번 더 생각하십시오.
+    #3) 막강한 힘에는 상당한 책임이 뒤따릅니다.
+
+[sudo] user1의 암호:
+죄송합니다만, 다시 시도하십시오.
+[sudo] user1의 암호:
+user1은(는) sudoers 설정 파일에 없습니다.  이 시도를 보고합니다.
+[user1@vbox choi]$ exit
+exit
+[choi@vbox ~]$ sudo more /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:998:998:User for polkitd:/:/sbin/nologin
+sssd:x:997:997:User for sssd:/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin
+geoclue:x:996:996:User for geoclue:/var/lib/geoclue:/sbin/nologin
+colord:x:995:995:User for colord:/var/lib/colord:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/:/sbin/nologin
+pipewire:x:994:993:PipeWire System Daemon:/run/pipewire:/usr/sbin/nologin
+clevis:x:993:992:Clevis Decryption Framework unprivileged user:/var/cache/clevis:/usr/sbin/nologin
+flatpak:x:992:991:Flatpak system helper:/:/usr/sbin/nologin
+libstoragemgmt:x:990:990:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+setroubleshoot:x:989:989:SELinux troubleshoot server:/var/lib/setroubleshoot:/usr/sbin/nologin
+gdm:x:42:42:GNOME Display Manager:/var/lib/gdm:/usr/sbin/nologin
+gnome-initial-setup:x:988:987::/run/gnome-initial-setup/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/usr/sbin/nologin
+chrony:x:987:986:chrony system user:/var/lib/chrony:/sbin/nologin
+dnsmasq:x:986:985:Dnsmasq DHCP and DNS server:/var/lib/dnsmasq:/usr/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+choi:x:1000:1000:choi:/home/choi:/bin/bash
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/false
+nginx:x:985:984:Nginx web server:/var/lib/nginx:/sbin/nologin
+user1:x:1001:1001::/home/user1:/bin/bash
+[choi@vbox ~]$ sudo cat /etc/default/useradd
+# useradd defaults file
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+
+[choi@vbox ~]$ sudo cat /etc/login.defs
+#
+# Please note that the parameters in this configuration file control the
+# behavior of the tools from the shadow-utils component. None of these
+# tools uses the PAM mechanism, and the utilities that use PAM (such as the
+# passwd command) should therefore be configured elsewhere. Refer to
+# /etc/pam.d/system-auth for more information.
+#
+
+#
+# Delay in seconds before being allowed another attempt after a login failure
+# Note: When PAM is used, some modules may enforce a minimum delay (e.g.
+#       pam_unix(8) enforces a 2s delay)
+#
+#FAIL_DELAY             3
+
+# Currently FAILLOG_ENAB is not supported
+
+#
+# Enable display of unknown usernames when login(1) failures are recorded.
+#
+#LOG_UNKFAIL_ENAB       no
+
+# Currently LOG_OK_LOGINS is not supported
+
+# Currently LASTLOG_ENAB is not supported
+
+#
+# Limit the highest user ID number for which the lastlog entries should
+# be updated.
+#
+# No LASTLOG_UID_MAX means that there is no user ID limit for writing
+# lastlog entries.
+#
+#LASTLOG_UID_MAX
+
+# Currently MAIL_CHECK_ENAB is not supported
+
+# Currently OBSCURE_CHECKS_ENAB is not supported
+
+# Currently PORTTIME_CHECKS_ENAB is not supported
+
+# Currently QUOTAS_ENAB is not supported
+
+# Currently SYSLOG_SU_ENAB is not supported
+
+#
+# Enable "syslog" logging of newgrp(1) and sg(1) activity.
+#
+#SYSLOG_SG_ENAB         yes
+
+# Currently CONSOLE is not supported
+
+# Currently SULOG_FILE is not supported
+
+# Currently MOTD_FILE is not supported
+
+# Currently ISSUE_FILE is not supported
+
+# Currently TTYTYPE_FILE is not supported
+
+# Currently FTMP_FILE is not supported
+
+# Currently NOLOGINS_FILE is not supported
+
+# Currently SU_NAME is not supported
+
+# *REQUIRED*
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define both, MAIL_DIR takes precedence.
+#
+MAIL_DIR        /var/spool/mail
+#MAIL_FILE      .mail
+
+#
+# If defined, file which inhibits all the usual chatter during the login
+# sequence.  If a full pathname, then hushed mode will be enabled if the
+# user's name or shell are found in the file.  If not a full pathname, then
+# hushed mode will be enabled if the file exists in the user's home directory.
+#
+#HUSHLOGIN_FILE .hushlogin
+#HUSHLOGIN_FILE /etc/hushlogins
+
+# Currently ENV_TZ is not supported
+
+# Currently ENV_HZ is not supported
+
+#
+# The default PATH settings, for superuser and normal users.
+#
+# (they are minimal, add the rest in the shell startup files)
+#ENV_SUPATH     PATH=/sbin:/bin:/usr/sbin:/usr/bin
+#ENV_PATH       PATH=/bin:/usr/bin
+
+#
+# Terminal permissions
+#
+#       TTYGROUP        Login tty will be assigned this group ownership.
+#       TTYPERM         Login tty will be set to this permission.
+#
+# If you have a write(1) program which is "setgid" to a special group
+# which owns the terminals, define TTYGROUP as the number of such group
+# and TTYPERM as 0620.  Otherwise leave TTYGROUP commented out and
+# set TTYPERM to either 622 or 600.
+#
+#TTYGROUP       tty
+#TTYPERM                0600
+
+# Currently ERASECHAR, KILLCHAR and ULIMIT are not supported
+
+# Default initial "umask" value used by login(1) on non-PAM enabled systems.
+# Default "umask" value for pam_umask(8) on PAM enabled systems.
+# UMASK is also used by useradd(8) and newusers(8) to set the mode for new
+# home directories if HOME_MODE is not set.
+# 022 is the default value, but 027, or even 077, could be considered
+# for increased privacy. There is no One True Answer here: each sysadmin
+# must make up their mind.
+UMASK           022
+
+# HOME_MODE is used by useradd(8) and newusers(8) to set the mode for new
+# home directories.
+# If HOME_MODE is not set, the value of UMASK is used to create the mode.
+HOME_MODE       0700
+
+# Password aging controls:
+#
+#       PASS_MAX_DAYS   Maximum number of days a password may be used.
+#       PASS_MIN_DAYS   Minimum number of days allowed between password changes.
+#       PASS_MIN_LEN    Minimum acceptable password length.
+#       PASS_WARN_AGE   Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS   99999
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
+
+# Currently PASS_MIN_LEN is not supported
+
+# Currently SU_WHEEL_ONLY is not supported
+
+# Currently CRACKLIB_DICTPATH is not supported
+
+#
+# Min/max values for automatic uid selection in useradd(8)
+#
+UID_MIN                  1000
+UID_MAX                 60000
+# System accounts
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+# Extra per user uids
+SUB_UID_MIN                100000
+SUB_UID_MAX             600100000
+SUB_UID_COUNT               65536
+
+#
+# Min/max values for automatic gid selection in groupadd(8)
+#
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+SYS_GID_MIN               201
+SYS_GID_MAX               999
+# Extra per user group ids
+SUB_GID_MIN                100000
+SUB_GID_MAX             600100000
+SUB_GID_COUNT               65536
+
+#
+# Max number of login(1) retries if password is bad
+#
+#LOGIN_RETRIES          3
+
+#
+# Max time in seconds for login(1)
+#
+#LOGIN_TIMEOUT          60
+
+# Currently PASS_CHANGE_TRIES is not supported
+
+# Currently PASS_ALWAYS_WARN is not supported
+
+# Currently PASS_MAX_LEN is not supported
+
+# Currently CHFN_AUTH is not supported
+
+#
+# Which fields may be changed by regular users using chfn(1) - use
+# any combination of letters "frwh" (full name, room number, work
+# phone, home phone).  If not defined, no changes are allowed.
+# For backward compatibility, "yes" = "rwh" and "no" = "frwh".
+#
+#CHFN_RESTRICT          rwh
+
+# Currently LOGIN_STRING is not supported
+
+# Currently MD5_CRYPT_ENAB is not supported
+
+#
+# If set to MD5, MD5-based algorithm will be used for encrypting password
+# If set to SHA256, SHA256-based algorithm will be used for encrypting password
+# If set to SHA512, SHA512-based algorithm will be used for encrypting password
+# If set to BLOWFISH, BLOWFISH-based algorithm will be used for encrypting password
+# If set to DES, DES-based algorithm will be used for encrypting password (default)
+#
+ENCRYPT_METHOD SHA512
+
+#
+# Only works if ENCRYPT_METHOD is set to SHA256 or SHA512.
+#
+# Define the number of SHA rounds.
+# With a lot of rounds, it is more difficult to brute-force the password.
+# However, more CPU resources will be needed to authenticate users if
+# this value is increased.
+#
+# If not specified, the libc will choose the default number of rounds (5000).
+# The values must be within the 1000-999999999 range.
+#
+SHA_CRYPT_MAX_ROUNDS 100000
+
+# Currently SHA_CRYPT_MIN_ROUNDS is not supported
+
+# Currently BCRYPT_MIN_ROUNDS and BCRYPT_MAX_ROUNDS are not supported
+
+# Currently CONSOLE_GROUPS is not supported
+
+#
+# Should login be allowed if we can't cd to the home directory?
+# Default is yes.
+#
+#DEFAULT_HOME   yes
+
+# Currently ENVIRON_FILE is not supported
+
+#
+# If defined, this command is run when removing a user.
+# It should remove any at/cron/print jobs etc. owned by
+# the user to be removed (passed as the first argument).
+#
+#USERDEL_CMD    /usr/sbin/userdel_local
+
+#
+# Enables userdel(8) to remove user groups if no members exist.
+#
+USERGROUPS_ENAB yes
+
+#
+# If set to a non-zero number, the shadow utilities will make sure that
+# groups never have more than this number of users on one line.
+# This permits to support split groups (groups split into multiple lines,
+# with the same group ID, to avoid limitation of the line length in the
+# group file).
+#
+# 0 is the default value and disables this feature.
+#
+#MAX_MEMBERS_PER_GROUP  0
+
+#
+# If useradd(8) should create home directories for users by default (non
+# system users only).
+# This option is overridden with the -M or -m flags on the useradd(8)
+# command-line.
+#
+CREATE_HOME     yes
+
+#
+# Force use shadow, even if shadow passwd & shadow group files are
+# missing.
+#
+#FORCE_SHADOW    yes
+
+#
+# Select the HMAC cryptography algorithm.
+# Used in pam_timestamp module to calculate the keyed-hash message
+# authentication code.
+#
+# Note: It is recommended to check hmac(3) to see the possible algorithms
+# that are available in your system.
+#
+HMAC_CRYPTO_ALGO SHA512
+[choi@vbox ~]$ sudo userdel user1 -r
+[choi@vbox ~]$ ls /home
+choi
+[choi@vbox ~]$ sudo tail -f /var/log/messages
+Jul  1 13:37:28 vbox systemd[1]: Started Hostname Service.
+Jul  1 13:37:59 vbox systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Jul  1 13:38:57 vbox su[195625]: (to user1) choi on pts/1
+Jul  1 13:39:08 vbox systemd[1]: Starting PackageKit Daemon...
+Jul  1 13:39:08 vbox systemd[1]: Started PackageKit Daemon.
+Jul  1 13:39:32 vbox NetworkManager[919]: <info>  [1751344772.2237] dhcp4 (enp0s8): state changed new lease, address=192.168.56.104
+Jul  1 13:39:32 vbox systemd[1]: Starting Network Manager Script Dispatcher Service...
+Jul  1 13:39:32 vbox systemd[1]: Started Network Manager Script Dispatcher Service.
+Jul  1 13:39:42 vbox systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Jul  1 13:41:02 vbox rsyslogd[1053]: imjournal: journal files changed, reloading...  [v8.2412.0-1.el9 try https://www.rsyslog.com/e/0 ]
+^C
+[choi@vbox ~]$ sudo tail -F /var/log/messages
+Jul  1 13:37:28 vbox systemd[1]: Started Hostname Service.
+Jul  1 13:37:59 vbox systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Jul  1 13:38:57 vbox su[195625]: (to user1) choi on pts/1
+Jul  1 13:39:08 vbox systemd[1]: Starting PackageKit Daemon...
+Jul  1 13:39:08 vbox systemd[1]: Started PackageKit Daemon.
+Jul  1 13:39:32 vbox NetworkManager[919]: <info>  [1751344772.2237] dhcp4 (enp0s8): state changed new lease, address=192.168.56.104
+Jul  1 13:39:32 vbox systemd[1]: Starting Network Manager Script Dispatcher Service...
+Jul  1 13:39:32 vbox systemd[1]: Started Network Manager Script Dispatcher Service.
+Jul  1 13:39:42 vbox systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Jul  1 13:41:02 vbox rsyslogd[1053]: imjournal: journal files changed, reloading...  [v8.2412.0-1.el9 try https://www.rsyslog.com/e/0 ]
+^C
+[choi@vbox ~]$ w
+ 13:42:01 up  5:38,  4 users,  load average: 0.11, 0.17, 0.12
+USER     TTY        LOGIN@   IDLE   JCPU   PCPU WHAT
+choi     seat0     월22    0.00s  0.00s  0.00s /usr/libexec/gdm-wayland-session --register-session gnome-session
+choi     tty2      월22   15:16m  0.01s  0.01s /usr/libexec/gnome-session-binary
+choi     pts/0     02:28   11:12m  0.01s  0.01s -bash
+choi     pts/1     13:37    1.00s  0.06s  0.01s w
+[choi@vbox ~]$ last
+choi     pts/1        192.168.56.1     Tue Jul  1 13:37   still logged in
+choi     pts/1        192.168.56.1     Tue Jul  1 13:36 - 13:37  (00:00)
+choi     pts/1        192.168.56.1     Tue Jul  1 03:10 - 13:36  (10:25)
+choi     pts/0        192.168.56.1     Tue Jul  1 02:28    gone - no logout
+choi     pts/1        192.168.56.1     Tue Jul  1 02:26 - 03:10  (00:44)
+choi     pts/0        192.168.56.1     Tue Jul  1 02:01 - 02:27  (00:25)
+choi     pts/1        192.168.56.1     Tue Jul  1 01:56 - 02:26  (00:29)
+choi     pts/0        192.168.56.1     Tue Jul  1 01:45 - 02:01  (00:15)
+choi     pts/0        192.168.56.1     Tue Jul  1 01:44 - 01:45  (00:01)
+choi     pts/1        192.168.56.1     Tue Jul  1 01:11 - 01:45  (00:33)
+choi     pts/1        192.168.56.1     Tue Jul  1 01:07 - 01:07  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:45 - 01:44  (01:58)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:39 - 23:44  (00:05)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:33 - 23:34  (00:01)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:31 - 23:32  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:30 - 23:30  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:21 - 23:29  (00:07)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:19 - 23:21  (00:01)
+choi     pts/0        192.168.56.1     Mon Jun 30 23:18 - 23:18  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 22:46 - 23:18  (00:32)
+choi     pts/0        192.168.56.1     Mon Jun 30 22:45 - 22:46  (00:00)
+choi     pts/1        192.168.56.1     Mon Jun 30 22:45 - 22:45  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 22:44 - 22:45  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 22:44 - 22:44  (00:00)
+choi     pts/0        192.168.56.1     Mon Jun 30 22:27 - 22:44  (00:16)
+choi     tty2         tty2             Mon Jun 30 22:25    gone - no logout
+choi     seat0        login screen     Mon Jun 30 22:25    gone - no logout
+reboot   system boot  5.14.0-570.17.1. Mon Jun 30 22:25   still running
+choi     tty2         tty2             Mon Jun 30 22:22 - crash  (00:02)
+choi     seat0        login screen     Mon Jun 30 22:22 - crash  (00:02)
+reboot   system boot  5.14.0-570.17.1. Mon Jun 30 22:22   still running
+choi     tty2         tty2             Mon Jun 30 22:15 - crash  (00:07)
+choi     seat0        login screen     Mon Jun 30 22:15 - crash  (00:07)
+reboot   system boot  5.14.0-570.17.1. Mon Jun 30 22:14   still running
+
+wtmp begins Mon Jun 30 22:14:58 2025
+[choi@vbox ~]$ lastlog
+Username         Port     From                                       Latest
+root             pts/1                                              화  7월  1 13:36:50 +0900 2025
+bin                                                                 **한번도 로그인한 적이 없습니다**
+daemon                                                              **한번도 로그인한 적이 없습니다**
+adm                                                                 **한번도 로그인한 적이 없습니다**
+lp                                                                  **한번도 로그인한 적이 없습니다**
+sync                                                                **한번도 로그인한 적이 없습니다**
+shutdown                                                            **한번도 로그인한 적이 없습니다**
+halt                                                                **한번도 로그인한 적이 없습니다**
+mail                                                                **한번도 로그인한 적이 없습니다**
+operator                                                            **한번도 로그인한 적이 없습니다**
+games                                                               **한번도 로그인한 적이 없습니다**
+ftp                                                                 **한번도 로그인한 적이 없습니다**
+nobody                                                              **한번도 로그인한 적이 없습니다**
+tss                                                                 **한번도 로그인한 적이 없습니다**
+systemd-coredump                                                    **한번도 로그인한 적이 없습니다**
+dbus                                                                **한번도 로그인한 적이 없습니다**
+polkitd                                                             **한번도 로그인한 적이 없습니다**
+sssd                                                                **한번도 로그인한 적이 없습니다**
+avahi                                                               **한번도 로그인한 적이 없습니다**
+geoclue                                                             **한번도 로그인한 적이 없습니다**
+colord                                                              **한번도 로그인한 적이 없습니다**
+rtkit                                                               **한번도 로그인한 적이 없습니다**
+pipewire                                                            **한번도 로그인한 적이 없습니다**
+clevis                                                              **한번도 로그인한 적이 없습니다**
+flatpak                                                             **한번도 로그인한 적이 없습니다**
+libstoragemgmt                                                      **한번도 로그인한 적이 없습니다**
+setroubleshoot                                                      **한번도 로그인한 적이 없습니다**
+gdm              tty1                                               월  6월 30 22:25:05 +0900 2025
+gnome-initial-setup                                                    **한번도 로그인한 적이 없습니다**
+sshd                                                                **한번도 로그인한 적이 없습니다**
+chrony                                                              **한번도 로그인한 적이 없습니다**
+dnsmasq                                                             **한번도 로그인한 적이 없습니다**
+tcpdump                                                             **한번도 로그인한 적이 없습니다**
+choi             pts/1    192.168.56.1                              화  7월  1 13:37:28 +0900 2025
+mysql                                                               **한번도 로그인한 적이 없습니다**
+nginx                                                               **한번도 로그인한 적이 없습니다**
+[choi@vbox ~]$ umask
+0022
+[choi@vbox ~]$ su -
+암호:
+[root@vbox ~]# echo "test" > /tmp/ro-file
+[root@vbox ~]# chmod 440 /tmp/ro-file
+[root@vbox ~]# exit
+로그아웃
+[choi@vbox ~]$ cat /tmp/ro-file
+cat: /tmp/ro-file: 허가 거부
+[choi@vbox ~]$ sudo u+s /usr/bin/cat
+sudo: u+s: 명령이 없습니다
+[choi@vbox ~]$ sudo chmod u+s /usr/bin/cat
+[choi@vbox ~]$ cat ro-file
+cat: ro-file: 그런 파일이나 디렉터리가 없습니다
+[choi@vbox ~]$ cat /tmp/ro-file
+test
+[choi@vbox ~]$ sudo u-s /usr/bin/cat
+sudo: u-s: 명령이 없습니다
+[choi@vbox ~]$ sudo chmod u-s usr/bin/cat
+chmod: cannot access 'usr/bin/cat': 그런 파일이나 디렉터리가 없습니다
+[choi@vbox ~]$ sudo chmod u-s /usr/bin/cat
+[choi@vbox ~]$ cat /tmp/ro-file
+cat: /tmp/ro-file: 허가 거부
+[choi@vbox ~]$ find /bin /usr/bin /sbin -perm 4000 -o -perm 2000 | xargs ls -l
+합계 12
+drwxr-xr-x. 2 choi    choi    4096  7월  1 03:27 mydir
+-rw-r--r--. 1 choi    choi      12  6월 30 23:30 test1.txt
+-rw-r--r--. 1 tcpdump tcpdump 1952  7월  1 01:57 test_DHCP.pcap
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 공개
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 다운로드
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 문서
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 음악
+[choi@vbox ~]$ sudo find /bin /usr/bin /sbin -perm 4000 -o -perm 2000 | xargs ls -l
+합계 12
+drwxr-xr-x. 2 choi    choi    4096  7월  1 03:27 mydir
+-rw-r--r--. 1 choi    choi      12  6월 30 23:30 test1.txt
+-rw-r--r--. 1 tcpdump tcpdump 1952  7월  1 01:57 test_DHCP.pcap
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 공개
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 다운로드
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 문서
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 음악
+[choi@vbox ~]$ sudo find /bin /usr/bin /sbin -perm 4000 -o -perm 2000 |xargs ls -l
+합계 12
+drwxr-xr-x. 2 choi    choi    4096  7월  1 03:27 mydir
+-rw-r--r--. 1 choi    choi      12  6월 30 23:30 test1.txt
+-rw-r--r--. 1 tcpdump tcpdump 1952  7월  1 01:57 test_DHCP.pcap
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 공개
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 다운로드
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 문서
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 바탕화면
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 비디오
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 사진
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 서식
+drwxr-xr-x. 2 choi    choi       6  6월 30 22:15 음악
+[choi@vbox ~]$ sudo find /bin /usr/bin /sbin -perm -4000 -o -perm -2000 |xargs ls -l
+-rwsr-xr-x. 1 root root     57976 10월 26  2022 /usr/bin/at
+-rwsr-xr-x. 1 root root     73704  4월 27 11:48 /usr/bin/chage
+-rws--x--x. 1 root root     32032  5월  3 15:29 /usr/bin/chfn
+-rws--x--x. 1 root root     23784  5월  3 15:29 /usr/bin/chsh
+-rwsr-xr-x. 1 root root     57120  5월  2 18:15 /usr/bin/crontab
+-rwsr-xr-x. 1 root root     36192  5월  2 10:09 /usr/bin/fusermount
+-rwsr-xr-x. 1 root root     36384 11월  5  2024 /usr/bin/fusermount3
+-rwsr-xr-x. 1 root root     78016  4월 27 11:48 /usr/bin/gpasswd
+-rwx--s--x. 1 root slocate  41048  5월 16  2022 /usr/bin/locate
+-rwsr-xr-x. 1 root root     48480  5월  3 15:29 /usr/bin/mount
+-rwsr-xr-x. 1 root root     41744  4월 27 11:48 /usr/bin/newgrp
+-rwsr-xr-x. 1 root root     32656  5월 15  2022 /usr/bin/passwd
+-rwsr-xr-x. 1 root root     32120 11월  5  2024 /usr/bin/pkexec
+-rwsr-xr-x. 1 root root     56944  5월  3 15:29 /usr/bin/su
+---s--x--x. 1 root root    185304  2월 15  2024 /usr/bin/sudo
+-rwsr-xr-x. 1 root root     36112  5월  3 15:29 /usr/bin/umount
+-rwsr-xr-x. 1 root root     15528  5월  2 10:24 /usr/bin/vmware-user-suid-wrapper
+-rwxr-sr-x. 1 root tty      23800  5월  3 15:29 /usr/bin/write
+[choi@vbox ~]$ ll /|grep tmp
+drwxrwxrwt.  19 root root 4096  7월  1 13:43 tmp
+[choi@vbox ~]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 ? MobaXterm Personal Edition v25.2 ?                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ? SSH session to choi@192.168.56.104                                 │
+    │   ? Direct SSH      :  ?                                             │
+    │   ? SSH compression :  ?                                             │
+    │   ? SSH-browser     :  ?                                             │
+    │   ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ? For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 13:37:28 2025 from 192.168.56.1
+[choi@vbox ~]$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         10.0.2.2        0.0.0.0         UG    0      0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     0      0        0 enp0s3
+192.168.56.0    0.0.0.0         255.255.255.0   U     101    0        0 enp0s8
+[choi@vbox ~]$ arp -a
+? (192.168.56.1) at 0a:00:27:00:00:08 [ether] on enp0s8
+_gateway (10.0.2.2) at 52:55:0a:00:02:02 [ether] on enp0s3
+? (10.0.2.3) at 52:55:0a:00:02:03 [ether] on enp0s3
+? (192.168.56.100) at 08:00:27:ab:be:75 [ether] on enp0s8
+[choi@vbox ~]$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        ether 08:00:27:19:bb:ec  txqueuelen 1000  (Ethernet)
+        RX packets 911039  bytes 1328382115 (1.2 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 363208  bytes 22034694 (21.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.56.104  netmask 255.255.255.0  broadcast 192.168.56.255
+        inet6 fe80::f7c5:59c1:4439:d2c7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:3d:65:19  txqueuelen 1000  (Ethernet)
+        RX packets 299410  bytes 179826600 (171.4 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 186643  bytes 22296061 (21.2 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 73  bytes 7936 (7.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 73  bytes 7936 (7.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[choi@vbox ~]$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:19:bb:ec brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 78983sec preferred_lft 78983sec
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:3d:65:19 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.104/24 brd 192.168.56.255 scope global dynamic noprefixroute enp0s8
+       valid_lft 350sec preferred_lft 350sec
+    inet6 fe80::f7c5:59c1:4439:d2c7/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+[choi@vbox ~]$ ip route
+default via 10.0.2.2 dev enp0s3
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.104 metric 101
+[choi@vbox ~]$ ip link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:19:bb:ec brd ff:ff:ff:ff:ff:ff
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:3d:65:19 brd ff:ff:ff:ff:ff:ff
+[choi@vbox ~]$ man netstat
+[choi@vbox ~]$ netstat -ntp
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 192.168.56.104:22       192.168.56.1:62004      ESTABLISHED -
+tcp        0      0 192.168.56.104:22       192.168.56.1:62005      ESTABLISHED -
+tcp        0      0 192.168.56.104:22       192.168.56.1:62321      ESTABLISHED -
+tcp        0    480 192.168.56.104:22       192.168.56.1:62320      ESTABLISHED -
+[choi@vbox ~]$ cat /etc/resolv.conf
+; generated by /usr/sbin/dhclient-script
+nameserver 10.0.2.3
+[choi@vbox ~]$ ping www.google.com
+PING www.google.com (142.250.76.132) 56(84) bytes of data.
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=1 ttl=255 time=34.4 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=2 ttl=255 time=34.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=3 ttl=255 time=35.0 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=4 ttl=255 time=33.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=5 ttl=255 time=35.3 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=6 ttl=255 time=35.0 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=7 ttl=255 time=34.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=8 ttl=255 time=35.3 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=9 ttl=255 time=35.1 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=10 ttl=255 time=34.3 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=11 ttl=255 time=33.8 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=12 ttl=255 time=35.1 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=13 ttl=255 time=34.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=14 ttl=255 time=34.6 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=15 ttl=255 time=34.7 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=16 ttl=255 time=34.8 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=17 ttl=255 time=33.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=18 ttl=255 time=35.1 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=19 ttl=255 time=34.6 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=20 ttl=255 time=34.9 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=21 ttl=255 time=34.8 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=22 ttl=255 time=34.8 ms
+64 bytes from kix07s06-in-f4.1e100.net (142.250.76.132): icmp_seq=23 ttl=255 time=35.0 ms
+^C
+--- www.google.com ping statistics ---
+23 packets transmitted, 23 received, 0% packet loss, time 22128ms
+rtt min/avg/max/mdev = 33.819/34.745/35.334/0.415 ms
+[choi@vbox ~]$ firewall-cmd --list-all
+Authorization failed.
+    Make sure polkit agent is running or run the application as superuser.
+[choi@vbox ~]$ sudo firewall-cmd --list-all
+[sudo] choi의 암호:
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s8
+  sources:
+  services: cockpit dhcpv6-client http https ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+[choi@vbox ~]$ exit
+로그아웃
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
