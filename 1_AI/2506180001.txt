@@ -1,0 +1,41 @@
+라이브러리없이 파이썬 기본 구문은?
+
+numpy
+배열,행렬
+
+Pandas
+Series, DataFrame
+행단위 추가는?>concat() 추천
+series,dataframe,sheets,excel 연동 체크
+# loc 의 경우 slicing의 end 포지션을 포함하는 것에 유의
+# iloc 의 경우 end 포지션을 포함하지 않음
+데이터는 대부분 숫자로 되어 있고 따로 리스트(dictionary) 저장
+ㄴ .unique() , .value_counts()
+병합하는 것들, 조금 복잡함
+데이터일 때는 시트, 함수일 때는 파이썬으로 시각화 하기 좋을듯
+레이텍(LaTex) : 수식 등을 표현할 때 쓰는 마크업 언어
+맷플롭립에서 레이텍이 먹음 > 좀더 고급화하여 그래프 그리기 가능
+맷플롭립은 맷랩(matlab) 출신
+plot : 그래프 scatter : 산점도 
+alpha 투명도
+style,s
+
+-------------------------
+버시칼라와 버지니카, 그리고 세토사
+
+읽어와서
+오염시키고
+갯수새고
+결측치 있는거 확인하고
+결측치를 어떻게 처리할까
+1. 결측치 있는 것을 드랍시키고 진행> target label도 같이 날려줘야함
+2. 평균값으로 nan 자리를 채움
+3. sepal_length 와 리니어 리그레션(회기분석)해서  sepal_width 값을 채우기
+
+전처리하고
+저장하고
+랜덤포레스트
+std scaler
+min-max scaler
+
+https://github.com/Harksu71/DataScienceAnalytics/blob/main/Lecture/SeSAC/No01_iris_data.ipynb

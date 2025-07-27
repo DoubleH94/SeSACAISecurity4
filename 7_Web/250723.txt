@@ -1,0 +1,129 @@
+웹 보안 및 모의해킹
+// Intro
+
+
+환경 구성 : kali, Burp Suite
+
+// 이론
+웹 관련 취약점을 이용한 공격(검색해도 많이 나옴)
+User-Browser-FW-WebFW-WebServer-WAS-DBMS
+
+여기는?
+
+CSS(Client Side script)
+> 아무 페이지나 들어가서 "우클릭-소스보기"로 확인 가능
+> 웹 취약점에 대해 대응사항에서 서버 혹은 클라이언트를 명시해줘야함.(보통 서버측)
+
+HTTP
+TCP 기반, 80번포트디폴트
+
+GET vs POST
+> TRACE, PUT, DELETE : 취약점 대부분 해당 메소드의 문제임
+> ex) 구글 검색 결과를 보니 GET 방식 메소드가 사용되고 있음.
+> GET은 URL에 데이터 및 형식이 노출되기 때문에 POST 방식이 추천됨.
+
+응답코드(Status Code)
+> 200 : 성공
+> 403 : 권한이 없어
+> 404 : 해당 파일이나 경로가 없어
+> 500 : 
+
+세션
+> 서버가 사용자(클라이언트)를 구분하기 위한 인증값
+> 쿠키는 클라이언트에 저장되는 반면, 세션은 서버에 저장됨.
+
+공개 진단 도구(스캐닝)
+공개 진단 도구 버스스윗,젯,피들러
+
+OWASP(Open Worldwide Application Security Project)
+: 웹 관련 TOP10 취약점을 연단위로 공개함.
+> 진단시 기반가이드에 다 포함되어 있으니 볼 필요는 없음.
+
+//Burp Suite
+Proxy
+> 브라우저와 서버 사이에서 proxy가 동작하도록 설정해야함.
+> Open browser : 세팅이 완료된 제공된 사이트.
+>> 동작하지 않는 특정 몇 사이트에 대한 추가설정만 하면 됨.
+> ex) kisia.or.kr
+
+! 프로그램 실행할 때마다 설정 : Response interception rules\Intercept respose based~~ 체크하기
+
+(참고)(용어) 파라미터 : 공격의 대상
+> 패킷에서 데이터가 담기는 부분은 모두 파라미터가 될 수 있음.
+> 데이터에 따른 서버의 응답을 보고 취약점인지 아닌지 판단함.
+! 패킷에서 데이터가 담기는 위치 확인 및 담기는 형식을 확인할 것.
+
+Intercept off : 전체 진행, "HTTP History"에서 전체 패킷 확인.
+Intercept on : 패킷 탈취, "Intercept" 탭에서 한 패킷씩 확인("Forward"로 패킷 전달)
+
+Repeater
+> Proxy에서 Request packet을 리피터에 보내 수정하며 작업함.
+
+Intruder\Position
+> Auto : 데이터를 담을 수 있는 부분을 체크해줌.
+> Clear : 선택한 영역에서 체크를 해제해줌.
+
+Intruder\Payloads : 반복 자동화
+> ex) 1,Numbers, 
+> 버프 유료 시 500개가 10초안에 끝남.
+
+(참고) 인증 실패 횟수 제한(보통 5회)이 있는 경우 이 방법으로 공격이 불가능함.
+> 비정상적인 요구로 탐지하는 솔루션이나 도구 등이 있는 경우 공격 불가능 할 수 있음.
+>> 이런 경우 Burp 에는 시간 텀을 두고 시도하는 방식도 가능함.
+
+? Intruder를 돌렸을 때 로그인의 성공/실패는 어떻게 구분하는지
+A. 기존에 응답 패킷의 길이가 로그인 성공/실패에 따라 어떤 값인지 확인하고, result 창에서 Length 값으로 확인함.
+
+// 1,2 Summary
+Intercept : 패킷 분석-피처 선정 >
+Repeater,Intruder : 활용해서 반복 대입
+ex) "쇼핑몰\상품페이지\상세페이지" 
+> 응답 패킷을 확인해보니 사용자 Data가 출력되는 경우
+> 요청 패킷을 확인해보니 ``
+
+// kali+dvwa
+kali\terminal\Font size : Ctrl + "+"
+dvwa : 웹 취약점 진단용 이미지
+
+kali 에서 dvwa 접근하기 실습 준비
+login\kali\kali
+systemctl start,enable,status apache2
+systemctl start,enable,status mysql
+dblogin : dvwa@localhost\p@ssw0rd
+
+/var/www/html/dvwa/config : 디렉터리가 있으면 서비스가 진행중임
+192.168.126.129/DVWA : admin/password
+빨간 불 : 실습용 진단 대상이 비활성화 되어 있음
+> 전부는 아니어도 몇 가지 세팅해서 실습진행 예정
+
+- 3가지 옵션 Off > On
+- chown www-data /var/www/html/DVWA/hackable/uploads
+- chown www-data /var/www/html/DVWA/config
+
+특정 브라우저에서만 동작하는 서비스가 있음. 크롬부터 설정
+
+크롬\설정\시스템\프록시
+설정하니 아파치는 들어가지는데 네이버는 안들어가짐
+인증서가 필요하다
+> 프록시 사용을 설정했으니 서버에서는 조작된 패킷일 수 있다=인증서가 없다
+> 그래서 Burp 의 인증서를 Export해서 로컬에 저장해준다
+
+XSS 취약점
+> 입/출력 값 검증 부재로 공격자가 게시글 또는 url을 통해 삽입한 악성 스크립트가 사용자의 요청에 의해 사용자 측(브라우저)에서 실행되는 취약점
+
+XSS 종류
+Stored XSS(상) : 공격자가 게시판이나 댓글, 사용자 프로필 등과 같이 악성 스크립트를 작성하여 저장한 후 해당 내용을 클릭하는 사용자들에게 스크립트를 실행시키는 취약점
+> 요청 패킷 및 응답 패킷(혹은 패킷 구성 단에서 서버,클라이언트 둘다) 두 가지 전부 탐지 및 대응 하여야함.
+
+Reflected XSS(중) : 반사형 공격, 공격자가 악성 스크립트를 URL 등을 통해 사용자에게 전달하고 해당 URL을 클릭하는 사용자가 본인도 모르게 서버에 요청을 보내고 서버는 요청에 대한 응답을 보내는 취약점
+> ex) 메일(S~와 유사), 
+
+DOM Based XSS(중) : 위의 두 방식과는 다르게 서버에 데이터가 전달되기 전에, 브라우저 안에서 자바스크립트에 의해 DOM에 직접 삽입되어 발생하는 취약점.
+> DOM(Document Object Model) : 깊게 알 필요 없지만 웹 개발 기초다.
+>> HTML 또는 XML 문서를 프로그래밍 방식으로 접근/조작 할 수 있도록 하는 인터페이스
+> 서버에서 탐지가 불가능
+
+(참고)XSS Cheat Sheet
+XSS(Stored) 실습
+
+(참고)대문자를 섞어서 필터를 우회하는 방법도 있음.

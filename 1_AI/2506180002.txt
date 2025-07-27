@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# 예시 데이터 생성
+df = pd.DataFrame({
+    'feature_A': [1.2, np.nan, 2.4, 2.9, np.nan, 3.3],
+    'feature_B': [10, 15, 14, 13, 12, 11],
+    'feature_C': [100, 200, 150, 120, 180, 160]
+})
+
+# 1. 결측값이 있는 target 컬럼
+target = 'feature_A'
+predictors = ['feature_B', 'feature_C']
+
+# 2. 학습용 데이터 (결측치 없는 행)
+train_df = df[df[target].notna()]
+
+# 3. 결측치 있는 데이터
+missing_df = df[df[target].isna()]
+
+# 4. 회귀 모델 훈련
+model = LinearRegression()
+model.fit(train_df[predictors], train_df[target])
+
+# 5. 결측값 예측
+predicted = model.predict(missing_df[predictors])
+
+# 6. 예측값으로 대체
+df.loc[df[target].isna(), target] = predicted
+
+print(df)
