@@ -1,0 +1,42 @@
+데이터분석및전처리
+1. KDD 분석 방법론(Knowledge Discovery in DB,KDD Model,1996)
+ㄴ 조금 오래되어서 통계학적인 관점이 들어가있음
+
+데이터선택(기획서)
+조건 설정 및 수정해서 전처리 : 노이즈, 이상값(Outlier, 바깥에 떨어져있는 데이터), 결측치(Missing Value, none 값)
+변환 : Gradient descent, Feature에 Scale 을 맞춰야함(Scaler가 정규화 작업을함).
+정규화 : min-max s~(최솟값, 최댓값을 활용하여 정규화), standard s~(표준편차 1시그마를 기준으로 3시그마)
+마이닝> 현재에는 모델링으로 최신화 되고 있음
+결과 평가 및 활용
+
+2. CRISP-DM(Cross Industry Standard Process for Data Mining) : 다양한 산업에 걸친 데이터 마이닝 검증된 방법
+
+3. SEMMA(Sample, Explore, Modify, Model, and Assess.) : SAS에서 개발한 데이터 마이닝 방법론
+ㄴ SAS는 통계 패키지
+Deploy 가 빠져있다.
+4. 빅데이터 분석 방법론 : 데이터산업진흥원에서 제시하는 참조모델
+ㄴ PM 프로젝트관리론에 관련된 방법론이 적용되어 있다
+
+요구의 명확
+ex) 챗지피티가 틀리는 문제를 항상 넣기
+************계획서를 지피티님과 잘 짜기,팀원의 역할분담,자료조사는 다같이
+1. 참고할만한 곳
+AI Hub를 잘 뒤질 것
+DACON : 인공지능 경진대회
+kaggle
+kdd
+
+대부분의 인터프리터 언어는 느리지만 파이썬은 C로 라이브러리가 만들어져 있어 성능이 좋음 
+R 프로그래밍이 파이썬으로 대체되고 있음
+NumPy 행렬등 수학 관련 라이브러리
+pandas 데이터 핸들링 도구
+matplotlib 그래프등 시각화 도구
+scikit learn 모델링 도구
+keras or tensorflow 뉴럴렛 사용할 때 도구
+
+Colab
+필요에 따라서는 GPU를 사용하는 기능도 있음 : 무료 기능이고 유료로 구매 가능
+오래 돌리는 프로젝트(딥러닝 학습)에는 부적합(12시간 세션 유지됨)
+최근 실행한 순서로 적용됨 > 초기화 코드 작성해놓고 활용할 수 있겠네
+배열 형태 변환은 해당 코드 내에서 일시적으로 변경
+

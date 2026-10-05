@@ -1,0 +1,107 @@
+    
+                     ? MobaXterm Personal Edition v25.2 ?                 
+                   (SSH client, X server and network tools)               
+                                                                          
+     ? SSH session to user01@[IP17]                                 
+       ? Direct SSH      :  ?                                             
+       ? SSH compression :  ?                                             
+       ? SSH-browser     :  ?                                             
+       ? X11-forwarding  :  ?  (remote display is forwarded through SSH)  
+                                                                          
+     ? For more info, ctrl+click on help or visit our website.            
+    
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Tue Jul  1 13:47:37 2025 from [IP14]
+[user01@vbox ~]$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        [IP1]         UG    0      0        0 enp0s3
+[IP2]        [IP1]         [IP20]   U     0      0        0 enp0s3
+[IP13]    [IP1]         [IP20]   U     101    0        0 enp0s8
+[user01@vbox ~]$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+[IP14]             ether   [MAC5]   C                     enp0s8
+_gateway                 ether   [MAC6]   C                     enp0s3
+[IP6]                 ether   [MAC7]   C                     enp0s3
+[IP15]           ether   [MAC4]   C                     enp0s8
+[user01@vbox ~]$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet [IP3]  netmask [IP20]  broadcast [IP5]
+        ether [MAC2]  txqueuelen 1000  (Ethernet)
+        RX packets 911109  bytes 1328389997 (1.2 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 363278  bytes 22040926 (21.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet [IP17]  netmask [IP20]  broadcast [IP18]
+        inet6 fe80::f7c5:59c1:4439:d2c7  prefixlen 64  scopeid 0x20<link>
+        ether [MAC3]  txqueuelen 1000  (Ethernet)
+        RX packets 306401  bytes [PHONE14] (177.4 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 188900  bytes 22580383 (21.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet [IP7]  netmask [IP19]
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 73  bytes 7936 (7.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 73  bytes 7936 (7.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[user01@vbox ~]$ cd /tmp
+[user01@vbox tmp]$ sudo tcpdump -i enp0s3 -w /tmp/test_DNS.pcap
+[sudo] user01 ȣ:
+dropped privs to tcpdump
+tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C6 packets captured
+6 packets received by filter
+0 packets dropped by kernel
+[user01@vbox tmp]$ sudo dnf install dhclient
+ Ÿڷ Ȯ(0:44:44 ): 2025 07 01 (ȭ)  01 11 26.
+ٷ dhcp-client-12:4.4.2-19.b1.el9.x86_64 ̹ ġǾ ֽϴ.
+Ӽ ذǾϴ.
+ó ʿ ʽϴ.
+ϷǾϴ!
+[user01@vbox tmp]$ nmcli connetcion down id enp0s3
+: 'connetcion' μ ص ʽϴ.  --help  ʽÿ.
+[user01@vbox tmp]$ nmcli connection down id enp0s3
+'enp0s3'  Ȱȭ ߽ϴ: Not authorized to deactivate connections
+[user01@vbox tmp]$ sudo nmcli connection down id enp0s3
+'enp0s3'   ȰȭǾϴ (D-Bus Ȱ : /org/freedesktop/NetworkManager/ActiveConnection/5)
+[user01@vbox tmp]$ nmcli device
+DEVICE  TYPE      STATE          CONNECTION
+enp0s8  ethernet             1
+lo      loopback   (ܺ)  lo
+enp0s3  ethernet       --
+[user01@vbox tmp]$ dhclient enp0s3 -r
+Can't create /var/run/dhclient.pid: Permission denied
+[user01@vbox tmp]$ sudo dhclient enp0s3 -r
+Killed old client process
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+[user01@vbox tmp]$ sudo dhclient enp0s3
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+grep: /etc/sysconfig/network-scripts/ifcfg-*: No such file or directory
+[user01@vbox tmp]$ nmcli connection up id enp0s3
+:  Ȱȭ ߽ϴ: Not authorized to control networking.
+[user01@vbox tmp]$ sudo nmcli connection up id enp0s3
+  ȰȭǾϴ (D- Ȱ : /org/freedesktop/NetworkManager/ActiveConnection/7)
+[user01@vbox tmp]$ exit
+α׾ƿ
+
+
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
